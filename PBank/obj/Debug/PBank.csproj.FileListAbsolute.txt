@@ -7,3 +7,4 @@ C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bank
 C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\obj\Debug\PBank.csproj.CoreCompileInputs.cache
 C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\obj\Debug\PBank.exe
 C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\obj\Debug\PBank.pdb
+C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\obj\Debug\PBank.Form1ss.resources

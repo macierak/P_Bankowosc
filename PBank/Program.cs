@@ -5,6 +5,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PBank {
+
+    static class Osoba {
+
+    }
+
     static class Program {
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
@@ -13,7 +18,7 @@ namespace PBank {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Form1ss());
         }
     }
 }
