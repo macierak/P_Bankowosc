@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BankowoscModelStoreContainer" CdmEntityContainer="BankowoscEntities">
+    <EntitySetMapping Name="Karta">
+      <EntityTypeMapping TypeName="BankowoscModel.Karta">
+        <MappingFragment StoreEntitySet="Karta">
+          <ScalarProperty Name="ID_Wlasciciela" ColumnName="ID_Wlasciciela" />
+          <ScalarProperty Name="Nr_Karty" ColumnName="Nr_Karty" />
+          <ScalarProperty Name="Exp_date" ColumnName="Exp_date" />
+          <ScalarProperty Name="cvv2" ColumnName="cvv2" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Klient">
+      <EntityTypeMapping TypeName="BankowoscModel.Klient">
+        <MappingFragment StoreEntitySet="Klient">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Imię" ColumnName="Imię" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+          <ScalarProperty Name="Nr_Dowodu" ColumnName="Nr_Dowodu" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Stan_Konta" ColumnName="Stan_Konta" />
+          <ScalarProperty Name="Urzadzenie_Mobilne" ColumnName="Urzadzenie_Mobilne" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="haslo" ColumnName="haslo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pracownik">
+      <EntityTypeMapping TypeName="BankowoscModel.Pracownik">
+        <MappingFragment StoreEntitySet="Pracownik">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Imię" ColumnName="Imię" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+          <ScalarProperty Name="Stanowisko" ColumnName="Stanowisko" />
+          <ScalarProperty Name="Nr_Komputera" ColumnName="Nr_Komputera" />
+          <ScalarProperty Name="Przełożony" ColumnName="Przełożony" />
+          <ScalarProperty Name="Pensja" ColumnName="Pensja" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="haslo" ColumnName="haslo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

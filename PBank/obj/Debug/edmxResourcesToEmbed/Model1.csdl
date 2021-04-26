@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankowoscModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Karta">
+    <Key>
+      <PropertyRef Name="Nr_Karty" />
+    </Key>
+    <Property Name="ID_Wlasciciela" Type="Int32" Nullable="false" />
+    <Property Name="Nr_Karty" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Exp_date" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cvv2" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Klient">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imię" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nazwisko" Type="String" MaxLength="27" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pesel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nr_Dowodu" Type="String" MaxLength="9" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Adres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stan_Konta" Type="Double" Nullable="false" />
+    <Property Name="Urzadzenie_Mobilne" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="login" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="haslo" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pracownik">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imię" Type="String" MaxLength="13" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nazwisko" Type="String" MaxLength="27" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pesel" Type="String" MaxLength="11" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stanowisko" Type="String" MaxLength="32" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Nr_Komputera" Type="Int32" Nullable="false" />
+    <Property Name="Przełożony" Type="Int32" />
+    <Property Name="Pensja" Type="Double" Nullable="false" />
+    <Property Name="login" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="haslo" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BankowoscEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Karta" EntityType="Self.Karta" />
+    <EntitySet Name="Klient" EntityType="Self.Klient" />
+    <EntitySet Name="Pracownik" EntityType="Self.Pracownik" />
+  </EntityContainer>
+</Schema>

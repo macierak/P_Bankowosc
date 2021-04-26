@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BankowoscModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Karta">
+    <Key>
+      <PropertyRef Name="Nr_Karty" />
+    </Key>
+    <Property Name="ID_Wlasciciela" Type="int" Nullable="false" />
+    <Property Name="Nr_Karty" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="Exp_date" Type="datetime" Nullable="false" />
+    <Property Name="cvv2" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Klient">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imię" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="Nazwisko" Type="varchar" MaxLength="27" Nullable="false" />
+    <Property Name="Pesel" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Nr_Dowodu" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="Adres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Stan_Konta" Type="float" Nullable="false" />
+    <Property Name="Urzadzenie_Mobilne" Type="varchar" MaxLength="15" />
+    <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pracownik">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imię" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="Nazwisko" Type="varchar" MaxLength="27" Nullable="false" />
+    <Property Name="Pesel" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Stanowisko" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="Nr_Komputera" Type="int" Nullable="false" />
+    <Property Name="Przełożony" Type="int" />
+    <Property Name="Pensja" Type="float" Nullable="false" />
+    <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="BankowoscModelStoreContainer">
+    <EntitySet Name="Karta" EntityType="Self.Karta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Klient" EntityType="Self.Klient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pracownik" EntityType="Self.Pracownik" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

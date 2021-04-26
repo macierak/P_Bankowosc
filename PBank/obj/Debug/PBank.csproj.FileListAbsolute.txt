@@ -8,3 +8,8 @@ C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bank
 C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\obj\Debug\PBank.exe
 C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\obj\Debug\PBank.pdb
 C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\obj\Debug\PBank.Form1ss.resources
+C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\bin\Debug\EntityFramework.dll
+C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\bin\Debug\EntityFramework.xml
+C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\obj\Debug\PBank.csproj.CopyComplete
