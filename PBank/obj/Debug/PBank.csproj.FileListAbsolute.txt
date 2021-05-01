@@ -13,3 +13,20 @@ C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bank
 C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\bin\Debug\EntityFramework.xml
 C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Macierak\..Studia\II rok\Lato\PW_Aplikacje bazodanowe C#\Projekt\P_Bankowosc\PBank\obj\Debug\PBank.csproj.CopyComplete
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\bin\Debug\PBank.exe.config
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\bin\Debug\PBank.exe
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\bin\Debug\PBank.pdb
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\bin\Debug\EntityFramework.dll
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\bin\Debug\EntityFramework.xml
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.csprojAssemblyReference.cache
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.Properties.Resources.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.csproj.GenerateResource.cache
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.csproj.CoreCompileInputs.cache
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.csproj.CopyComplete
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.exe
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.pdb
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormPerm.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormLogin.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank._FormAsystent.resources

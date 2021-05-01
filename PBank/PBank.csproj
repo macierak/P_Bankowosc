@@ -55,11 +55,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="_FormAsystent.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="_FormAsystent.Designer.cs">
+      <DependentUpon>_FormAsystent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPerm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPerm.Designer.cs">
+      <DependentUpon>FormPerm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Karta.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -87,8 +99,35 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="_FormDyrektor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_FormDyrektor.Designer.cs">
+      <DependentUpon>_FormDyrektor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_FormKlient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_FormKlient.Designer.cs">
+      <DependentUpon>_FormKlient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_FormKonsultant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_FormKonsultant.Designer.cs">
+      <DependentUpon>_FormKonsultant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_FormZarzadca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_FormZarzadca.Designer.cs">
+      <DependentUpon>_FormZarzadca.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FormPerm.resx">
+      <DependentUpon>FormPerm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -100,6 +139,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="_FormAsystent.resx">
+      <DependentUpon>_FormAsystent.cs</DependentUpon>
+    </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model1.Designer.cs</LastGenOutput>
