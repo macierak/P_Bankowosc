@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="BankowoscModelStoreContainer" CdmEntityContainer="BankowoscEntities">
+  <EntityContainerMapping StorageEntityContainer="BankowoscEntitiesStoreContainer" CdmEntityContainer="P_BankowoscEntities">
     <EntitySetMapping Name="Karta">
-      <EntityTypeMapping TypeName="BankowoscModel.Karta">
+      <EntityTypeMapping TypeName="BankowoscEntities.Karta">
         <MappingFragment StoreEntitySet="Karta">
           <ScalarProperty Name="ID_Wlasciciela" ColumnName="ID_Wlasciciela" />
           <ScalarProperty Name="Nr_Karty" ColumnName="Nr_Karty" />
@@ -12,7 +12,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Klient">
-      <EntityTypeMapping TypeName="BankowoscModel.Klient">
+      <EntityTypeMapping TypeName="BankowoscEntities.Klient">
         <MappingFragment StoreEntitySet="Klient">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Imię" ColumnName="Imię" />
@@ -28,7 +28,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Pracownik">
-      <EntityTypeMapping TypeName="BankowoscModel.Pracownik">
+      <EntityTypeMapping TypeName="BankowoscEntities.Pracownik">
         <MappingFragment StoreEntitySet="Pracownik">
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Imię" ColumnName="Imię" />
@@ -43,5 +43,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="Pracownik_Manage" FunctionName="BankowoscEntities.Store.Pracownik_Manage" />
+    <FunctionImportMapping FunctionImportName="pay_manage" FunctionName="BankowoscEntities.Store.pay_manage" />
   </EntityContainerMapping>
 </Mapping>

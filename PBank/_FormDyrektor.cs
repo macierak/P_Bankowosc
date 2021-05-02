@@ -22,5 +22,24 @@ namespace PBank {
         private void _FormDyrektor_FormClosing(object sender, FormClosingEventArgs e) {
             form.Visible = true;
         }
+
+        private void search_Click(object sender, EventArgs e) {
+
+        }
+
+        private void awans_Click(object sender, EventArgs e) {
+            FormAwans formA = new FormAwans();
+            formA.ShowDialog();
+        }
+
+        private void degradacja_Click(object sender, EventArgs e) {
+            FormDegradacja formD = new FormDegradacja(100);
+            formD.ShowDialog();
+        }
+
+        private void paychange_Click(object sender, EventArgs e) {
+            FormZmianaPlacy formZP = new FormZmianaPlacy(100);
+            formZP.ShowDialog();
+        }
     }
 }

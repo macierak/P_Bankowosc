@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BankowoscModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BankowoscEntities.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Karta">
           <Key>
             <PropertyRef Name="Nr_Karty" />
@@ -44,16 +44,24 @@
           <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
           <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="BankowoscModelStoreContainer">
+        <Function Name="pay_manage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="pensja" Type="float" Mode="In" />
+        </Function>
+        <Function Name="Pracownik_Manage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="stanowisko" Type="nvarchar" Mode="In" />
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="pensja" Type="float" Mode="In" />
+        </Function>
+        <EntityContainer Name="BankowoscEntitiesStoreContainer">
           <EntitySet Name="Karta" EntityType="Self.Karta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Klient" EntityType="Self.Klient" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pracownik" EntityType="Self.Pracownik" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="BankowoscModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="BankowoscEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="Karta">
           <Key>
             <PropertyRef Name="Nr_Karty" />
@@ -93,19 +101,32 @@
           <Property Name="login" Type="String" MaxLength="12" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="haslo" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
-        <EntityContainer Name="BankowoscEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="P_BankowoscEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Karta" EntityType="Self.Karta" />
           <EntitySet Name="Klient" EntityType="Self.Klient" />
           <EntitySet Name="Pracownik" EntityType="Self.Pracownik" />
+          <FunctionImport Name="Awans">
+            <Parameter Name="stanowisko" Mode="In" Type="String" />
+            <Parameter Name="id" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="Pracownik_Manage">
+            <Parameter Name="stanowisko" Mode="In" Type="String" />
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="pensja" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="pay_manage">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="pensja" Mode="In" Type="Double" />
+          </FunctionImport>
         </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="BankowoscModelStoreContainer" CdmEntityContainer="BankowoscEntities">
+        <EntityContainerMapping StorageEntityContainer="BankowoscEntitiesStoreContainer" CdmEntityContainer="P_BankowoscEntities">
           <EntitySetMapping Name="Karta">
-            <EntityTypeMapping TypeName="BankowoscModel.Karta">
+            <EntityTypeMapping TypeName="BankowoscEntities.Karta">
               <MappingFragment StoreEntitySet="Karta">
                 <ScalarProperty Name="ID_Wlasciciela" ColumnName="ID_Wlasciciela" />
                 <ScalarProperty Name="Nr_Karty" ColumnName="Nr_Karty" />
@@ -115,7 +136,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Klient">
-            <EntityTypeMapping TypeName="BankowoscModel.Klient">
+            <EntityTypeMapping TypeName="BankowoscEntities.Klient">
               <MappingFragment StoreEntitySet="Klient">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Imię" ColumnName="Imię" />
@@ -131,7 +152,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Pracownik">
-            <EntityTypeMapping TypeName="BankowoscModel.Pracownik">
+            <EntityTypeMapping TypeName="BankowoscEntities.Pracownik">
               <MappingFragment StoreEntitySet="Pracownik">
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="Imię" ColumnName="Imię" />
@@ -146,6 +167,8 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="Pracownik_Manage" FunctionName="BankowoscEntities.Store.Pracownik_Manage" />
+          <FunctionImportMapping FunctionImportName="pay_manage" FunctionName="BankowoscEntities.Store.pay_manage" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

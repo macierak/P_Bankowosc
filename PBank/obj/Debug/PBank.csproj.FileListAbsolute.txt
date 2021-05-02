@@ -27,6 +27,13 @@ C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.csproj.CoreCom
 C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.csproj.CopyComplete
 C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.exe
 C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.pdb
-C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormPerm.resources
 C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormLogin.resources
 C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank._FormAsystent.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\bin\Debug\pl-PL\PBank.resources.dll
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormLogin.pl-PL.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\pl-PL\PBank.resources.dll
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank._FormDyrektor.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank._FormKlient.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormAwans.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormDegradacja.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormZmianaPlacy.resources
