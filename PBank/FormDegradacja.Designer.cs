@@ -26,7 +26,6 @@ namespace PBank {
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             this.Degraduj = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.Osoba = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -39,12 +38,6 @@ namespace PBank {
             this.Degraduj.Text = "Degraduj!";
             this.Degraduj.UseVisualStyleBackColor = true;
             this.Degraduj.Click += new System.EventHandler(this.Degraduj_Click);
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Osoba
             // 
@@ -70,7 +63,6 @@ namespace PBank {
 
         #endregion
         private System.Windows.Forms.Button Degraduj;
-        private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ListBox Osoba;
     }
 }
