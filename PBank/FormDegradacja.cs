@@ -48,7 +48,7 @@ namespace PBank {
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e) {
+        private void Osoba_SelectedIndexChanged(object sender, EventArgs e) {
             try {
                 string stanowisko = Osoba.SelectedItem.ToString();
                 this.id = IdTab[Osoba.SelectedIndex];

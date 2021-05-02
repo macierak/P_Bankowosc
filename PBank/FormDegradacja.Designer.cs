@@ -53,6 +53,7 @@ namespace PBank {
             this.Osoba.Name = "Osoba";
             this.Osoba.Size = new System.Drawing.Size(255, 264);
             this.Osoba.TabIndex = 2;
+            this.Osoba.SelectedIndexChanged += new System.EventHandler(this.Osoba_SelectedIndexChanged);
             // 
             // FormDegradacja
             // 
