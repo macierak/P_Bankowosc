@@ -12,11 +12,13 @@ namespace PBank
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
-    public partial class BankowoscEntities : DbContext
+    public partial class P_BankowoscEntities : DbContext
     {
-        public BankowoscEntities()
-            : base("name=BankowoscEntities")
+        public P_BankowoscEntities()
+            : base("name=P_BankowoscEntities")
         {
         }
     
@@ -28,5 +30,48 @@ namespace PBank
         public virtual DbSet<Karta> Karta { get; set; }
         public virtual DbSet<Klient> Klient { get; set; }
         public virtual DbSet<Pracownik> Pracownik { get; set; }
+    
+        public virtual int Awans(string stanowisko, Nullable<int> id)
+        {
+            var stanowiskoParameter = stanowisko != null ?
+                new ObjectParameter("stanowisko", stanowisko) :
+                new ObjectParameter("stanowisko", typeof(string));
+    
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Awans", stanowiskoParameter, idParameter);
+        }
+    
+        public virtual int Pracownik_Manage(string stanowisko, Nullable<int> id, Nullable<double> pensja)
+        {
+            var stanowiskoParameter = stanowisko != null ?
+                new ObjectParameter("stanowisko", stanowisko) :
+                new ObjectParameter("stanowisko", typeof(string));
+    
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var pensjaParameter = pensja.HasValue ?
+                new ObjectParameter("pensja", pensja) :
+                new ObjectParameter("pensja", typeof(double));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("Pracownik_Manage", stanowiskoParameter, idParameter, pensjaParameter);
+        }
+    
+        public virtual int pay_manage(Nullable<int> id, Nullable<double> pensja)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var pensjaParameter = pensja.HasValue ?
+                new ObjectParameter("pensja", pensja) :
+                new ObjectParameter("pensja", typeof(double));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pay_manage", idParameter, pensjaParameter);
+        }
     }
 }

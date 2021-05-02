@@ -4,10 +4,10 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="282551168e0543bc9589c877f53d9171" Name="Diagram1">
-        <EntityTypeShape EntityType="BankowoscModel.Karta" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="BankowoscModel.Klient" Width="1.5" PointX="3.5" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="BankowoscModel.Pracownik" Width="1.5" PointX="6.125" PointY="0.875" IsExpanded="true" />
+      <Diagram DiagramId="e8b6a02a872d4c4f87e6571c2aa2c5a1" Name="Diagram1">
+        <EntityTypeShape EntityType="BankowoscEntities.Karta" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankowoscEntities.Klient" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BankowoscEntities.Pracownik" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
