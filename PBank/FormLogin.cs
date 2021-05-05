@@ -6,6 +6,7 @@ using System.Drawing;
 
 namespace PBank {
     public partial class FormLogin : Form {
+        int ID = 0;
         private int permissionLevel;
         private string ImNaz;
         Random rand = new Random();
@@ -27,7 +28,7 @@ namespace PBank {
         private void logowanie_Click(object sender, EventArgs e) {        
             string login1 = login.Text;
             string haslo1 = haslo.Text;
-
+            
             login.Text = null;
             haslo.Text = null;
             using (P_BankowoscEntities Dane = new P_BankowoscEntities()) {
@@ -49,17 +50,29 @@ namespace PBank {
                     if (p.Stanowisko == "Asystent") {
                         permissionLevel = 20;
                     } 
-                    ImNaz = p.Imię + " " + p.Nazwisko;   
+                    ImNaz = p.Imię + " " + p.Nazwisko;
+                    this.ID = p.ID;
                 }
 
                 var zalogowanyK = from k in Dane.Klient
                                   where (k.login.Equals(login1) && k.haslo.Equals(haslo1))
                                   select k;
-                
-                foreach(Klient k in zalogowanyK) {
+
+                foreach (Klient k in zalogowanyK) {
                     //MessageBox.Show("Zalogowano jako klient " + k.Imię + " " + k.Nazwisko);
-                    permissionLevel = 5;
-                    ImNaz = k.Imię + " " + k.Nazwisko;
+                    //if(loggedOnPhone()){
+                        if (this.checkphone(/*device.getIMEI,*/k.Urzadzenie_Mobilne, k.Urzadzenie_Mobilne)) {
+
+
+                            permissionLevel = 5;
+                            ImNaz = k.Imię + " " + k.Nazwisko;
+                            this.ID = k.ID;
+                        }
+                    else {
+                        permissionLevel = 5;
+                        ImNaz = k.Imię + " " + k.Nazwisko;
+                        this.ID = k.ID;
+                    }
                 }
 
                 if (permissionLevel == 0) {
@@ -82,11 +95,11 @@ namespace PBank {
                             formKo.ShowDialog();
                             break;
                         case 50:
-                            _FormZarzadca formZ = new _FormZarzadca(ImNaz, this);
+                            _FormZarzadca formZ = new _FormZarzadca(ImNaz, this, this.ID);
                             formZ.ShowDialog();
                             break;
                         case 100:
-                            _FormDyrektor formD = new _FormDyrektor(ImNaz, this);
+                            _FormDyrektor formD = new _FormDyrektor(ImNaz, this, this.ID);
                             formD.ShowDialog();
                             break;
                     }                    
@@ -98,7 +111,17 @@ namespace PBank {
             wrongpass.Visible = false;
             timer1.Enabled = false;
         }
+        private bool checkphone(string imeiIN, string imeiDB) {
+            if (imeiIN == imeiDB) {
 
+            }
+            else {
+                //return validatePhone();
+            }
+
+
+            return true;
+        }
         private void logowanie_MouseDown(object sender, MouseEventArgs e) {
             logowanie.BackColor = System.Drawing.Color.DarkSlateGray;
         }

@@ -45,7 +45,7 @@ namespace PBank {
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(225, 45);
+            this.label2.Location = new System.Drawing.Point(300, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 1;
@@ -54,7 +54,7 @@ namespace PBank {
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(375, 45);
+            this.label3.Location = new System.Drawing.Point(450, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(66, 13);
             this.label3.TabIndex = 2;
@@ -62,7 +62,7 @@ namespace PBank {
             // 
             // nowPay
             // 
-            this.nowPay.Location = new System.Drawing.Point(225, 60);
+            this.nowPay.Location = new System.Drawing.Point(300, 60);
             this.nowPay.Name = "nowPay";
             this.nowPay.ReadOnly = true;
             this.nowPay.Size = new System.Drawing.Size(105, 20);
@@ -70,7 +70,7 @@ namespace PBank {
             // 
             // newPay
             // 
-            this.newPay.Location = new System.Drawing.Point(375, 60);
+            this.newPay.Location = new System.Drawing.Point(450, 60);
             this.newPay.Name = "newPay";
             this.newPay.Size = new System.Drawing.Size(105, 20);
             this.newPay.TabIndex = 4;
@@ -80,13 +80,13 @@ namespace PBank {
             this.Osoby.FormattingEnabled = true;
             this.Osoby.Location = new System.Drawing.Point(45, 60);
             this.Osoby.Name = "Osoby";
-            this.Osoby.Size = new System.Drawing.Size(150, 56);
+            this.Osoby.Size = new System.Drawing.Size(240, 225);
             this.Osoby.TabIndex = 5;
             this.Osoby.SelectedIndexChanged += new System.EventHandler(this.Osoby_SelectedIndexChanged);
             // 
             // update
             // 
-            this.update.Location = new System.Drawing.Point(225, 90);
+            this.update.Location = new System.Drawing.Point(300, 90);
             this.update.Name = "update";
             this.update.Size = new System.Drawing.Size(255, 30);
             this.update.TabIndex = 6;

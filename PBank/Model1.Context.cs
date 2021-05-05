@@ -30,6 +30,8 @@ namespace PBank
         public virtual DbSet<Karta> Karta { get; set; }
         public virtual DbSet<Klient> Klient { get; set; }
         public virtual DbSet<Pracownik> Pracownik { get; set; }
+        public virtual DbSet<Klient_ARCH> Klient_ARCH { get; set; }
+        public virtual DbSet<Pracownik_ARCH> Pracownik_ARCH { get; set; }
     
         public virtual int Awans(string stanowisko, Nullable<int> id)
         {
@@ -72,6 +74,60 @@ namespace PBank
                 new ObjectParameter("pensja", typeof(double));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("pay_manage", idParameter, pensjaParameter);
+        }
+    
+        public virtual int zatrudnij(string imie, string nazwisko, string pesel, string stanowisko, Nullable<int> nr_komputera, Nullable<int> przelozony, Nullable<double> pensja, string login, string haslo)
+        {
+            var imieParameter = imie != null ?
+                new ObjectParameter("imie", imie) :
+                new ObjectParameter("imie", typeof(string));
+    
+            var nazwiskoParameter = nazwisko != null ?
+                new ObjectParameter("nazwisko", nazwisko) :
+                new ObjectParameter("nazwisko", typeof(string));
+    
+            var peselParameter = pesel != null ?
+                new ObjectParameter("pesel", pesel) :
+                new ObjectParameter("pesel", typeof(string));
+    
+            var stanowiskoParameter = stanowisko != null ?
+                new ObjectParameter("stanowisko", stanowisko) :
+                new ObjectParameter("stanowisko", typeof(string));
+    
+            var nr_komputeraParameter = nr_komputera.HasValue ?
+                new ObjectParameter("nr_komputera", nr_komputera) :
+                new ObjectParameter("nr_komputera", typeof(int));
+    
+            var przelozonyParameter = przelozony.HasValue ?
+                new ObjectParameter("przelozony", przelozony) :
+                new ObjectParameter("przelozony", typeof(int));
+    
+            var pensjaParameter = pensja.HasValue ?
+                new ObjectParameter("pensja", pensja) :
+                new ObjectParameter("pensja", typeof(double));
+    
+            var loginParameter = login != null ?
+                new ObjectParameter("login", login) :
+                new ObjectParameter("login", typeof(string));
+    
+            var hasloParameter = haslo != null ?
+                new ObjectParameter("haslo", haslo) :
+                new ObjectParameter("haslo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("zatrudnij", imieParameter, nazwiskoParameter, peselParameter, stanowiskoParameter, nr_komputeraParameter, przelozonyParameter, pensjaParameter, loginParameter, hasloParameter);
+        }
+    
+        public virtual int zwolnij(Nullable<int> id, Nullable<System.DateTime> data)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var dataParameter = data.HasValue ?
+                new ObjectParameter("data", data) :
+                new ObjectParameter("data", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("zwolnij", idParameter, dataParameter);
         }
     }
 }

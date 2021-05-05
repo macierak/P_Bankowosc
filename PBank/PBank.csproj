@@ -82,6 +82,12 @@
     <Compile Include="FormAwans.Designer.cs">
       <DependentUpon>FormAwans.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormZatrudnij.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormZatrudnij.Designer.cs">
+      <DependentUpon>FormZatrudnij.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormZmianaPlacy.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Klient.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Klient_ARCH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
@@ -110,6 +119,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Pracownik.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pracownik_ARCH.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
@@ -167,6 +179,9 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormZatrudnij.resx">
+      <DependentUpon>FormZatrudnij.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormZmianaPlacy.resx">
       <DependentUpon>FormZmianaPlacy.cs</DependentUpon>
     </EmbeddedResource>
@@ -183,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="_FormKlient.resx">
       <DependentUpon>_FormKlient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_FormZarzadca.resx">
+      <DependentUpon>_FormZarzadca.cs</DependentUpon>
     </EmbeddedResource>
     <EntityDeploy Include="Model1.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
@@ -229,6 +247,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="graphics\loupe.png" />
+    <None Include="graphics\arrow_up.png" />
+    <None Include="graphics\arrow_down.png" />
+    <None Include="graphics\minus.png" />
+    <None Include="graphics\plus.png" />
+    <None Include="graphics\change.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>

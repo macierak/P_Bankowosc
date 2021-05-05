@@ -24,6 +24,21 @@
     <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
   </EntityType>
+  <EntityType Name="Klient_ARCH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imię" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="Nazwisko" Type="varchar" MaxLength="27" Nullable="false" />
+    <Property Name="Pesel" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Nr_Dowodu" Type="varchar" MaxLength="9" Nullable="false" />
+    <Property Name="Adres" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Stan_Konta" Type="float" Nullable="false" />
+    <Property Name="Urzadzenie_Mobilne" Type="varchar" MaxLength="15" />
+    <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
+  </EntityType>
   <EntityType Name="Pracownik">
     <Key>
       <PropertyRef Name="ID" />
@@ -39,6 +54,22 @@
     <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
   </EntityType>
+  <EntityType Name="Pracownik_ARCH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Imię" Type="varchar" MaxLength="13" Nullable="false" />
+    <Property Name="Nazwisko" Type="varchar" MaxLength="27" Nullable="false" />
+    <Property Name="Pesel" Type="varchar" MaxLength="11" Nullable="false" />
+    <Property Name="Stanowisko" Type="varchar" MaxLength="32" Nullable="false" />
+    <Property Name="Nr_Komputera" Type="int" Nullable="false" />
+    <Property Name="Przełożony" Type="int" />
+    <Property Name="Pensja" Type="float" Nullable="false" />
+    <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
+    <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="data_zwolnienia" Type="date" />
+  </EntityType>
   <Function Name="pay_manage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />
     <Parameter Name="pensja" Type="float" Mode="In" />
@@ -48,9 +79,26 @@
     <Parameter Name="id" Type="int" Mode="In" />
     <Parameter Name="pensja" Type="float" Mode="In" />
   </Function>
+  <Function Name="zatrudnij" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="imie" Type="varchar" Mode="In" />
+    <Parameter Name="nazwisko" Type="varchar" Mode="In" />
+    <Parameter Name="pesel" Type="varchar" Mode="In" />
+    <Parameter Name="stanowisko" Type="varchar" Mode="In" />
+    <Parameter Name="nr_komputera" Type="int" Mode="In" />
+    <Parameter Name="przelozony" Type="int" Mode="In" />
+    <Parameter Name="pensja" Type="float" Mode="In" />
+    <Parameter Name="login" Type="varchar" Mode="In" />
+    <Parameter Name="haslo" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="zwolnij" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="data" Type="date" Mode="In" />
+  </Function>
   <EntityContainer Name="BankowoscEntitiesStoreContainer">
     <EntitySet Name="Karta" EntityType="Self.Karta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Klient" EntityType="Self.Klient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Klient_ARCH" EntityType="Self.Klient_ARCH" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Pracownik" EntityType="Self.Pracownik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Pracownik_ARCH" EntityType="Self.Pracownik_ARCH" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>

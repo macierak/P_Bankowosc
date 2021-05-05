@@ -13,9 +13,10 @@ namespace PBank {
         int permLvl;
         int[] idTab;
         string[] pensja;
-        int id;
-        public FormZmianaPlacy(int permLvl) {
+        int id, idosoby;
+        public FormZmianaPlacy(int permLvl, int ID) {
             InitializeComponent();
+            this.idosoby = ID;
             this.permLvl = permLvl;
             this.idTab = printDane();
         }
@@ -29,11 +30,12 @@ namespace PBank {
                 int i = 0;
                 foreach (Pracownik p in zalogowanyP) {
                     if (p.Stanowisko == "Dyrektor" || (p.Stanowisko == "Zarzadca Oddzialu" && this.permLvl >51)) continue;
-
-                    Osoby.Items.Add(p.ID + ". " + p.Imię + " " + p.Nazwisko + "( " + p.Stanowisko+" ) "+ p.Pensja);
-                    this.idTab[i] = p.ID;
-                    this.pensja[i] = p.Pensja.ToString();
-                    i++;
+                    if (p.Przełożony == this.idosoby || this.idosoby == 1) {
+                        Osoby.Items.Add(p.ID + ". " + p.Imię + " " + p.Nazwisko + "( " + p.Stanowisko + " ) " + p.Pensja);
+                        this.idTab[i] = p.ID;
+                        this.pensja[i] = p.Pensja.ToString();
+                        i++;
+                    }
                 }
             }
             return idTab;

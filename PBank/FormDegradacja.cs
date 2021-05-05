@@ -14,25 +14,28 @@ namespace PBank {
         int[] IdTab;
         int id;
         int permissionLevel;
-
-        public FormDegradacja(int perm) {
+        int idosoby;
+        public FormDegradacja(int perm, int id) {
             InitializeComponent();
-            this.IdTab = printDane();
             this.permissionLevel = perm;
+            this.idosoby = id;
+            this.IdTab = printDane();
         }
-
         public int[] printDane() {
             using (P_BankowoscEntities Dane = new P_BankowoscEntities()) {
+                
                 var zalogowanyP = from p in Dane.Pracownik
                                   select p;
                 this.IdTab = new int[zalogowanyP.Count()];
                 int i = 0;
                 foreach (Pracownik p in zalogowanyP) {
                     if (p.Stanowisko == "Dyrektor" || p.Stanowisko == "Asystent") continue;
-                    if (p.Stanowisko == "Zarzadca Oddzialu" && this.permissionLevel == 50) continue;
-                    Osoba.Items.Add(p.ID + ". " + p.Imię + " " + p.Nazwisko + "  -  " + p.Stanowisko);
-                    this.IdTab[i] = p.ID;
-                    i++;
+                    if (p.Stanowisko == "Zarzadca Oddzialu" && this.permissionLevel < 51) continue;
+                    if (p.Przełożony == this.idosoby || this.idosoby == 1) {
+                        Osoba.Items.Add(p.ID + ". " + p.Imię + " " + p.Nazwisko + "  -  " + p.Stanowisko);
+                        this.IdTab[i] = p.ID;
+                        i++;
+                    }                    
                 }
             }
             return IdTab;

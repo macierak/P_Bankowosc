@@ -12,11 +12,12 @@ namespace PBank {
     public partial class FormAwans : Form {
         string next;
         int[] IdTab;
-        int id;
+        int id, idosoby;
         string[] pensja;
 
-        public FormAwans() {
+        public FormAwans(int ID) {
             InitializeComponent();
+            this.idosoby = ID;
             this.IdTab = printDane();
         }
        
@@ -29,11 +30,12 @@ namespace PBank {
                 int i = 0;
                 foreach (Pracownik p in zalogowanyP) {
                     if (p.Stanowisko == "Dyrektor" || p.Stanowisko == "Zarzadca Oddzialu") continue;
-                  
-                    Osoba.Items.Add(p.ID + ". " + p.Imię + " " + p.Nazwisko + "  -  " + p.Stanowisko);
-                    this.IdTab[i] = p.ID;
-                    this.pensja[i] = p.Pensja.ToString();
-                    i++;
+                    if (p.Przełożony == this.idosoby || this.idosoby == 1) {
+                        Osoba.Items.Add(p.ID + ". " + p.Imię + " " + p.Nazwisko + "  -  " + p.Stanowisko);
+                        this.IdTab[i] = p.ID;
+                        this.pensja[i] = p.Pensja.ToString();
+                        i++;
+                    }
                 }
             }
             return IdTab;
@@ -55,8 +57,15 @@ namespace PBank {
             Pensja2.Text = "";
         }
 
-     
+        private void FormAwans_Load(object sender, EventArgs e) {
+
+        }
+
         private void Osoba_Click(object sender, EventArgs e) {
+            Pensja1.Visible = true;
+            Pensja2.Visible = true;
+            label_nowapensja.Visible = true;
+            label_pensja.Visible = true;
             Pensja1.Text = this.pensja[Osoba.SelectedIndex];
             try {
                 string stanowisko = Osoba.SelectedItem.ToString();

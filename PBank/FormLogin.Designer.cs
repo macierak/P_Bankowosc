@@ -105,7 +105,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Candara Light", 36F);
             this.label4.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label4.Location = new System.Drawing.Point(25, 19);
+            this.label4.Location = new System.Drawing.Point(15, 15);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(481, 59);
             this.label4.TabIndex = 7;
@@ -134,7 +134,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Candara Light", 48F);
             this.label3.ForeColor = System.Drawing.Color.DarkCyan;
-            this.label3.Location = new System.Drawing.Point(570, 15);
+            this.label3.Location = new System.Drawing.Point(585, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(208, 78);
             this.label3.TabIndex = 9;
@@ -183,7 +183,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = global::PBank.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(784, 457);
+            this.ClientSize = new System.Drawing.Size(784, 461);
             this.Controls.Add(this.randomBsGo);
             this.Controls.Add(this.logowanie);
             this.Controls.Add(this.label3);

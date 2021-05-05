@@ -29,6 +29,8 @@ namespace PBank {
             this.Pensja1 = new System.Windows.Forms.Label();
             this.Pensja2 = new System.Windows.Forms.TextBox();
             this.BrakPensji = new System.Windows.Forms.Label();
+            this.label_pensja = new System.Windows.Forms.Label();
+            this.label_nowapensja = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Osoba
@@ -53,17 +55,21 @@ namespace PBank {
             // Pensja1
             // 
             this.Pensja1.AutoSize = true;
-            this.Pensja1.Location = new System.Drawing.Point(435, 75);
+            this.Pensja1.Location = new System.Drawing.Point(480, 75);
             this.Pensja1.Name = "Pensja1";
             this.Pensja1.Size = new System.Drawing.Size(0, 13);
             this.Pensja1.TabIndex = 2;
+            this.Pensja1.Visible = false;
             // 
             // Pensja2
             // 
-            this.Pensja2.Location = new System.Drawing.Point(450, 120);
+            this.Pensja2.BackColor = System.Drawing.Color.White;
+            this.Pensja2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Pensja2.Location = new System.Drawing.Point(495, 120);
             this.Pensja2.Name = "Pensja2";
             this.Pensja2.Size = new System.Drawing.Size(210, 20);
             this.Pensja2.TabIndex = 3;
+            this.Pensja2.Visible = false;
             // 
             // BrakPensji
             // 
@@ -75,11 +81,33 @@ namespace PBank {
             this.BrakPensji.Text = "Podaj nową wartość pensji!";
             this.BrakPensji.Visible = false;
             // 
+            // label_pensja
+            // 
+            this.label_pensja.AutoSize = true;
+            this.label_pensja.Location = new System.Drawing.Point(435, 75);
+            this.label_pensja.Name = "label_pensja";
+            this.label_pensja.Size = new System.Drawing.Size(42, 13);
+            this.label_pensja.TabIndex = 5;
+            this.label_pensja.Text = "Pensja:";
+            this.label_pensja.Visible = false;
+            // 
+            // label_nowapensja
+            // 
+            this.label_nowapensja.AutoSize = true;
+            this.label_nowapensja.Location = new System.Drawing.Point(420, 120);
+            this.label_nowapensja.Name = "label_nowapensja";
+            this.label_nowapensja.Size = new System.Drawing.Size(72, 13);
+            this.label_nowapensja.TabIndex = 6;
+            this.label_nowapensja.Text = "Nowa pensja:";
+            this.label_nowapensja.Visible = false;
+            // 
             // FormAwans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label_nowapensja);
+            this.Controls.Add(this.label_pensja);
             this.Controls.Add(this.BrakPensji);
             this.Controls.Add(this.Pensja2);
             this.Controls.Add(this.Pensja1);
@@ -87,6 +115,7 @@ namespace PBank {
             this.Controls.Add(this.Osoba);
             this.Name = "FormAwans";
             this.Text = "FormAwans";
+            this.Load += new System.EventHandler(this.FormAwans_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -99,5 +128,7 @@ namespace PBank {
         private System.Windows.Forms.Label Pensja1;
         private System.Windows.Forms.TextBox Pensja2;
         private System.Windows.Forms.Label BrakPensji;
+        private System.Windows.Forms.Label label_pensja;
+        private System.Windows.Forms.Label label_nowapensja;
     }
 }

@@ -45,5 +45,40 @@
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="Pracownik_Manage" FunctionName="BankowoscEntities.Store.Pracownik_Manage" />
     <FunctionImportMapping FunctionImportName="pay_manage" FunctionName="BankowoscEntities.Store.pay_manage" />
+    <EntitySetMapping Name="Klient_ARCH">
+      <EntityTypeMapping TypeName="BankowoscEntities.Klient_ARCH">
+        <MappingFragment StoreEntitySet="Klient_ARCH">
+          <ScalarProperty Name="haslo" ColumnName="haslo" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="Urzadzenie_Mobilne" ColumnName="Urzadzenie_Mobilne" />
+          <ScalarProperty Name="Stan_Konta" ColumnName="Stan_Konta" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+          <ScalarProperty Name="Nr_Dowodu" ColumnName="Nr_Dowodu" />
+          <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Imię" ColumnName="Imię" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pracownik_ARCH">
+      <EntityTypeMapping TypeName="BankowoscEntities.Pracownik_ARCH">
+        <MappingFragment StoreEntitySet="Pracownik_ARCH">
+          <ScalarProperty Name="data_zwolnienia" ColumnName="data_zwolnienia" />
+          <ScalarProperty Name="haslo" ColumnName="haslo" />
+          <ScalarProperty Name="login" ColumnName="login" />
+          <ScalarProperty Name="Pensja" ColumnName="Pensja" />
+          <ScalarProperty Name="Przełożony" ColumnName="Przełożony" />
+          <ScalarProperty Name="Nr_Komputera" ColumnName="Nr_Komputera" />
+          <ScalarProperty Name="Stanowisko" ColumnName="Stanowisko" />
+          <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+          <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+          <ScalarProperty Name="Imię" ColumnName="Imię" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="zatrudnij" FunctionName="BankowoscEntities.Store.zatrudnij" />
+    <FunctionImportMapping FunctionImportName="zwolnij" FunctionName="BankowoscEntities.Store.zwolnij" />
   </EntityContainerMapping>
 </Mapping>

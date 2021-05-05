@@ -37,3 +37,5 @@ C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank._FormKlient.re
 C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormAwans.resources
 C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormDegradacja.resources
 C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormZmianaPlacy.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank._FormZarzadca.resources
+C:\Users\macie\Documents\GitHub\P_Bankowosc\PBank\obj\Debug\PBank.FormZatrudnij.resources
