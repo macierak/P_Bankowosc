@@ -77,7 +77,7 @@ namespace PBank {
             this.Paychange.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Paychange.Click += new System.EventHandler(this.Paychange_Click);
             this.Paychange.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Paychange_MouseDown);
-            this.Paychange.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Degradacja_MouseUp);
+            this.Paychange.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Paychange_MouseUp);
             // 
             // Zatrudnienie
             // 
@@ -159,7 +159,7 @@ namespace PBank {
             this.Awans.TabIndex = 9;
             this.Awans.Text = "Awansuj\r\n";
             this.Awans.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Awans.Click += new System.EventHandler(this.awans_Click);
+            this.Awans.Click += new System.EventHandler(this.Awans_Click);
             this.Awans.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Awans_MouseDown);
             this.Awans.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Awans_MouseUp);
             // 
@@ -183,7 +183,7 @@ namespace PBank {
             this.Search.TabIndex = 8;
             this.Search.Text = "Wyszukaj w bazie";
             this.Search.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.Search.Click += new System.EventHandler(this.search_Click);
+            this.Search.Click += new System.EventHandler(this.Search_Click);
             this.Search.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Search_MouseDown);
             this.Search.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Search_MouseUp);
             // 

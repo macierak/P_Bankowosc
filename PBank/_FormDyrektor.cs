@@ -24,7 +24,8 @@ namespace PBank {
             form.Visible = true;
         }
 
-        private void search_Click(object sender, EventArgs e) {
+
+        private void Search_Click(object sender, EventArgs e) {
 
         }
         private void Search_MouseDown(object sender, MouseEventArgs e) {
@@ -34,7 +35,8 @@ namespace PBank {
             Search.BackColor = System.Drawing.Color.DarkCyan;
         }
 
-        private void awans_Click(object sender, EventArgs e) {
+
+        private void Awans_Click(object sender, EventArgs e) {
             FormAwans formA = new FormAwans(this.ID);
             formA.ShowDialog();
         }
@@ -44,6 +46,7 @@ namespace PBank {
         private void Awans_MouseUp(object sender, MouseEventArgs e) {
             Awans.BackColor = System.Drawing.Color.DarkCyan;
         }
+
 
         private void Degradacja_Click(object sender, EventArgs e) {
             FormDegradacja formD = new FormDegradacja(100, this.ID);
@@ -56,6 +59,7 @@ namespace PBank {
             Degradacja.BackColor = System.Drawing.Color.DarkCyan;
         }
 
+
         private void Paychange_Click(object sender, EventArgs e) {
             FormZmianaPlacy formZP = new FormZmianaPlacy(100, this.ID);
             formZP.ShowDialog();
@@ -67,6 +71,7 @@ namespace PBank {
             Paychange.BackColor = System.Drawing.Color.DarkCyan;
         }
 
+
         private void Zwolnienie_Click(object sender, EventArgs e) {
 
         }
@@ -76,6 +81,7 @@ namespace PBank {
         private void Zwolnienie_MouseUp(object sender, MouseEventArgs e) {
             Zwolnienie.BackColor = System.Drawing.Color.DarkCyan;
         }
+
 
         private void Zatrudnienie_Click(object sender, EventArgs e) {
 
@@ -87,6 +93,5 @@ namespace PBank {
             Zatrudnienie.BackColor = System.Drawing.Color.DarkCyan;
         }
 
-        
     }
 }

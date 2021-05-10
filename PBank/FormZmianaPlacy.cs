@@ -31,7 +31,7 @@ namespace PBank {
                 foreach (Pracownik p in zalogowanyP) {
                     if (p.Stanowisko == "Dyrektor" || (p.Stanowisko == "Zarzadca Oddzialu" && this.permLvl >51)) continue;
                     if (p.Przełożony == this.idosoby || this.idosoby == 1) {
-                        Osoby.Items.Add(p.ID + ". " + p.Imię + " " + p.Nazwisko + "( " + p.Stanowisko + " ) " + p.Pensja);
+                        Osoby.Items.Add(p.ID + ". " + p.Imię + " " + p.Nazwisko + " (" + p.Stanowisko + ")");
                         this.idTab[i] = p.ID;
                         this.pensja[i] = p.Pensja.ToString();
                         i++;
@@ -44,6 +44,14 @@ namespace PBank {
         private void Osoby_SelectedIndexChanged(object sender, EventArgs e) {
             nowPay.Text = this.pensja[Osoby.SelectedIndex];
             this.id = this.idTab[Osoby.SelectedIndex];
+        }
+
+        private void Update_MouseUp(object sender, MouseEventArgs e) {
+            Update.BackColor = System.Drawing.Color.DarkCyan;
+        }
+
+        private void Update_MouseDown(object sender, MouseEventArgs e) {
+            Update.BackColor = System.Drawing.Color.DarkSlateGray;
         }
 
         private void update_Click(object sender, EventArgs e) {

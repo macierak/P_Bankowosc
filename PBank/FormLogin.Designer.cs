@@ -172,7 +172,7 @@
             this.randomBsGo.BackColor = System.Drawing.Color.Transparent;
             this.randomBsGo.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.randomBsGo.ForeColor = System.Drawing.Color.DarkCyan;
-            this.randomBsGo.Location = new System.Drawing.Point(0, 420);
+            this.randomBsGo.Location = new System.Drawing.Point(765, 420);
             this.randomBsGo.Name = "randomBsGo";
             this.randomBsGo.Size = new System.Drawing.Size(64, 26);
             this.randomBsGo.TabIndex = 11;
