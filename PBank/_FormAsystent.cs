@@ -39,7 +39,7 @@ namespace PBank {
                 System.IO.Stream ding = Properties.Resources.ding;
                 System.Media.SoundPlayer kawa = new System.Media.SoundPlayer(ding);
                 kawa.Play();
-                pictureBox1.Image = Properties.Resources.smacznej_kawusi_gif;
+                pictureBox1.Image = Properties.Resources.korwin;
             }         
         }
 

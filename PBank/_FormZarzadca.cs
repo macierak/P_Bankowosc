@@ -75,5 +75,8 @@ namespace PBank {
             Paychange.BackColor = System.Drawing.Color.DarkCyan;
         }
 
+        private void _FormZarzadca_Load(object sender, EventArgs e) {
+
+        }
     }
 }

@@ -158,6 +158,7 @@ namespace PBank {
             this.Name = "_FormZarzadca";
             this.Text = "_FormZarzadca";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._FormZarzadca_FormClosing);
+            this.Load += new System.EventHandler(this._FormZarzadca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

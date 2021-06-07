@@ -27,6 +27,8 @@ namespace PBank {
             if (permlvl <51) stanowisko.Items.RemoveAt(2);
         }
 
+        
+
         private void zatrudnij_Click(object sender, EventArgs e) {
             isCorrect = true;
             stanowisko.BackColor = System.Drawing.Color.DarkCyan;
@@ -68,6 +70,8 @@ namespace PBank {
         private void label10_MouseDown(object sender, MouseEventArgs e) {
             label10.BackColor = System.Drawing.Color.DarkSlateGray;
             
+        }
+        private void FormZatrudnij_Load(object sender, EventArgs e) {
         }
     }
 }
