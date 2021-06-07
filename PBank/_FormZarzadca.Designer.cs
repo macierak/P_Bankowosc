@@ -28,6 +28,8 @@ namespace PBank {
             this.awans = new System.Windows.Forms.Button();
             this.degraduj = new System.Windows.Forms.Button();
             this.zmianaplacy = new System.Windows.Forms.Button();
+            this.Zatrudnij = new System.Windows.Forms.Button();
+            this.Zwolnij = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // search
@@ -70,11 +72,33 @@ namespace PBank {
             this.zmianaplacy.UseVisualStyleBackColor = true;
             this.zmianaplacy.Click += new System.EventHandler(this.paychange_Click);
             // 
+            // Zatrudnij
+            // 
+            this.Zatrudnij.Location = new System.Drawing.Point(131, 251);
+            this.Zatrudnij.Name = "Zatrudnij";
+            this.Zatrudnij.Size = new System.Drawing.Size(104, 76);
+            this.Zatrudnij.TabIndex = 4;
+            this.Zatrudnij.Text = "Zatrudnij";
+            this.Zatrudnij.UseVisualStyleBackColor = true;
+            this.Zatrudnij.Click += new System.EventHandler(this.Zatrudnij_Click);
+            // 
+            // Zwolnij
+            // 
+            this.Zwolnij.Location = new System.Drawing.Point(370, 245);
+            this.Zwolnij.Name = "Zwolnij";
+            this.Zwolnij.Size = new System.Drawing.Size(94, 81);
+            this.Zwolnij.TabIndex = 5;
+            this.Zwolnij.Text = "Zwolnij";
+            this.Zwolnij.UseVisualStyleBackColor = true;
+            this.Zwolnij.Click += new System.EventHandler(this.Zwolnij_Click);
+            // 
             // _FormZarzadca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Zwolnij);
+            this.Controls.Add(this.Zatrudnij);
             this.Controls.Add(this.zmianaplacy);
             this.Controls.Add(this.degraduj);
             this.Controls.Add(this.awans);
@@ -92,5 +116,7 @@ namespace PBank {
         private System.Windows.Forms.Button awans;
         private System.Windows.Forms.Button degraduj;
         private System.Windows.Forms.Button zmianaplacy;
+        private System.Windows.Forms.Button Zatrudnij;
+        private System.Windows.Forms.Button Zwolnij;
     }
 }

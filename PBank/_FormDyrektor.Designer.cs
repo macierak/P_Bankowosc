@@ -205,6 +205,7 @@ namespace PBank {
             this.Name = "_FormDyrektor";
             this.Text = "_FormDyrektor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._FormDyrektor_FormClosing);
+            this.Load += new System.EventHandler(this._FormDyrektor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace PBank {
@@ -34,6 +27,10 @@ namespace PBank {
                     Dane.zatrudnij(imie.Text, nazwisko.Text, pesel.Text, stanowisko.SelectedItem.ToString(), int.Parse(nr_komputera.Text), int.Parse(przelozony.Text), double.Parse(pensja.Text), login.Text, haslo.Text);
                 }
             }
+        }
+
+        private void FormZatrudnij_Load(object sender, EventArgs e) {
+
         }
     }
 }

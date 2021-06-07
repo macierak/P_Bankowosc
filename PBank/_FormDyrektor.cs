@@ -25,10 +25,12 @@ namespace PBank {
         }
 
         private void search_Click(object sender, EventArgs e) {
-
+            FormWyswietlDane formW = new FormWyswietlDane();
+            formW.ShowDialog();
         }
         private void Search_MouseDown(object sender, MouseEventArgs e) {
             Search.BackColor = System.Drawing.Color.DarkSlateGray;
+
         }
         private void Search_MouseUp(object sender, MouseEventArgs e) {
             Search.BackColor = System.Drawing.Color.DarkCyan;
@@ -68,7 +70,8 @@ namespace PBank {
         }
 
         private void Zwolnienie_Click(object sender, EventArgs e) {
-
+            FormZwolnij formZ = new FormZwolnij(ID);
+            formZ.ShowDialog();
         }
         private void Zwolnienie_MouseDown(object sender, MouseEventArgs e) {
             Zwolnienie.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -78,7 +81,8 @@ namespace PBank {
         }
 
         private void Zatrudnienie_Click(object sender, EventArgs e) {
-
+            FormZatrudnij formZat = new FormZatrudnij(ID);
+            formZat.ShowDialog();
         }
         private void Zatrudnienie_MouseDown(object sender, MouseEventArgs e) {
             Zatrudnienie.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -87,6 +91,8 @@ namespace PBank {
             Zatrudnienie.BackColor = System.Drawing.Color.DarkCyan;
         }
 
-        
+        private void _FormDyrektor_Load(object sender, EventArgs e) {
+
+        }
     }
 }

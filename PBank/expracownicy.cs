@@ -12,7 +12,7 @@ namespace PBank
     using System;
     using System.Collections.Generic;
     
-    public partial class Pracownik_ARCH
+    public partial class expracownicy
     {
         public int ID { get; set; }
         public string Imię { get; set; }
@@ -20,10 +20,10 @@ namespace PBank
         public string Pesel { get; set; }
         public string Stanowisko { get; set; }
         public int Nr_Komputera { get; set; }
-        public int Przełożony { get; set; }
+        public Nullable<int> Przełożony { get; set; }
         public double Pensja { get; set; }
         public string login { get; set; }
         public string haslo { get; set; }
-        public Nullable<System.DateTime> Data_zwolnienia { get; set; }
+        public Nullable<System.DateTime> data_zwolnienia { get; set; }
     }
 }

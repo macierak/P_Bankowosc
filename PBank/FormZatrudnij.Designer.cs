@@ -131,6 +131,7 @@ namespace PBank {
             this.Controls.Add(this.zatrudnij);
             this.Name = "FormZatrudnij";
             this.Text = "FormZatrudnij";
+            this.Load += new System.EventHandler(this.FormZatrudnij_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

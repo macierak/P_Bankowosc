@@ -51,7 +51,7 @@ namespace PBank {
                         permissionLevel = 20;
                     } 
                     ImNaz = p.Imię + " " + p.Nazwisko;
-                    this.ID = p.ID;
+                    this.ID = p.ID;//
                 }
 
                 var zalogowanyK = from k in Dane.Klient
@@ -136,6 +136,10 @@ namespace PBank {
                 randomBsGo.Location = new Point(this.Width, randomBsGo.Location.Y);
                 randomBsGo.Text = this.randomBs[this.rand.Next(0, 5)];
             }       
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e) {
+
         }
     }
 }

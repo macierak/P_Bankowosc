@@ -67,6 +67,57 @@
           <Property Name="Imię" Type="varchar" MaxLength="13" Nullable="false" />
           <Property Name="Nazwisko" Type="varchar" MaxLength="27" Nullable="false" />
           <Property Name="Pesel" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Stanowisko" Type="varchar" MaxLength="200" />
+          <Property Name="Nr_Komputera" Type="int" Nullable="false" />
+          <Property Name="Przełożony" Type="int" Nullable="false" />
+          <Property Name="Pensja" Type="float" Nullable="false" />
+          <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="Data_zwolnienia" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'P_Bankowosc.dbo.exklienci' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="exklienci">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Imię" />
+            <PropertyRef Name="Nazwisko" />
+            <PropertyRef Name="Pesel" />
+            <PropertyRef Name="Nr_Dowodu" />
+            <PropertyRef Name="Adres" />
+            <PropertyRef Name="Stan_Konta" />
+            <PropertyRef Name="login" />
+            <PropertyRef Name="haslo" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Imię" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="Nazwisko" Type="varchar" MaxLength="27" Nullable="false" />
+          <Property Name="Pesel" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Nr_Dowodu" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="Adres" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Stan_Konta" Type="float" Nullable="false" />
+          <Property Name="Urzadzenie_Mobilne" Type="varchar" MaxLength="15" />
+          <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'P_Bankowosc.dbo.expracownicy' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="expracownicy">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Imię" />
+            <PropertyRef Name="Nazwisko" />
+            <PropertyRef Name="Pesel" />
+            <PropertyRef Name="Stanowisko" />
+            <PropertyRef Name="Nr_Komputera" />
+            <PropertyRef Name="Pensja" />
+            <PropertyRef Name="login" />
+            <PropertyRef Name="haslo" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Imię" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="Nazwisko" Type="varchar" MaxLength="27" Nullable="false" />
+          <Property Name="Pesel" Type="varchar" MaxLength="11" Nullable="false" />
           <Property Name="Stanowisko" Type="varchar" MaxLength="32" Nullable="false" />
           <Property Name="Nr_Komputera" Type="int" Nullable="false" />
           <Property Name="Przełożony" Type="int" />
@@ -74,6 +125,49 @@
           <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
           <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
           <Property Name="data_zwolnienia" Type="date" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'P_Bankowosc.dbo.klienci' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="klienci">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Imię" />
+            <PropertyRef Name="Nazwisko" />
+            <PropertyRef Name="Pesel" />
+            <PropertyRef Name="Nr_Dowodu" />
+            <PropertyRef Name="Adres" />
+            <PropertyRef Name="Stan_Konta" />
+            <PropertyRef Name="login" />
+            <PropertyRef Name="haslo" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Imię" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="Nazwisko" Type="varchar" MaxLength="27" Nullable="false" />
+          <Property Name="Pesel" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Nr_Dowodu" Type="varchar" MaxLength="9" Nullable="false" />
+          <Property Name="Adres" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Stan_Konta" Type="float" Nullable="false" />
+          <Property Name="Urzadzenie_Mobilne" Type="varchar" MaxLength="15" />
+          <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
+          <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'P_Bankowosc.dbo.pracownicy' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="pracownicy">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Imię" />
+            <PropertyRef Name="Nazwisko" />
+            <PropertyRef Name="Pesel" />
+            <PropertyRef Name="Stanowisko" />
+            <PropertyRef Name="Przełożony" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Imię" Type="varchar" MaxLength="13" Nullable="false" />
+          <Property Name="Nazwisko" Type="varchar" MaxLength="27" Nullable="false" />
+          <Property Name="Pesel" Type="varchar" MaxLength="11" Nullable="false" />
+          <Property Name="Stanowisko" Type="varchar" MaxLength="32" Nullable="false" />
+          <Property Name="Przełożony" Type="varchar" MaxLength="41" Nullable="false" />
         </EntityType>
         <Function Name="pay_manage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
@@ -95,6 +189,10 @@
           <Parameter Name="login" Type="varchar" Mode="In" />
           <Parameter Name="haslo" Type="varchar" Mode="In" />
         </Function>
+        <Function Name="zwolnienie" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="date" Type="date" Mode="In" />
+        </Function>
         <Function Name="zwolnij" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="data" Type="date" Mode="In" />
@@ -105,6 +203,59 @@
           <EntitySet Name="Klient_ARCH" EntityType="Self.Klient_ARCH" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pracownik" EntityType="Self.Pracownik" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pracownik_ARCH" EntityType="Self.Pracownik_ARCH" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="exklienci" EntityType="Self.exklienci" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [exklienci].[ID] AS [ID], 
+    [exklienci].[Imię] AS [Imię], 
+    [exklienci].[Nazwisko] AS [Nazwisko], 
+    [exklienci].[Pesel] AS [Pesel], 
+    [exklienci].[Nr_Dowodu] AS [Nr_Dowodu], 
+    [exklienci].[Adres] AS [Adres], 
+    [exklienci].[Stan_Konta] AS [Stan_Konta], 
+    [exklienci].[Urzadzenie_Mobilne] AS [Urzadzenie_Mobilne], 
+    [exklienci].[login] AS [login], 
+    [exklienci].[haslo] AS [haslo]
+    FROM [dbo].[exklienci] AS [exklienci]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="expracownicy" EntityType="Self.expracownicy" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [expracownicy].[ID] AS [ID], 
+    [expracownicy].[Imię] AS [Imię], 
+    [expracownicy].[Nazwisko] AS [Nazwisko], 
+    [expracownicy].[Pesel] AS [Pesel], 
+    [expracownicy].[Stanowisko] AS [Stanowisko], 
+    [expracownicy].[Nr_Komputera] AS [Nr_Komputera], 
+    [expracownicy].[Przełożony] AS [Przełożony], 
+    [expracownicy].[Pensja] AS [Pensja], 
+    [expracownicy].[login] AS [login], 
+    [expracownicy].[haslo] AS [haslo], 
+    [expracownicy].[data_zwolnienia] AS [data_zwolnienia]
+    FROM [dbo].[expracownicy] AS [expracownicy]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="klienci" EntityType="Self.klienci" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [klienci].[ID] AS [ID], 
+    [klienci].[Imię] AS [Imię], 
+    [klienci].[Nazwisko] AS [Nazwisko], 
+    [klienci].[Pesel] AS [Pesel], 
+    [klienci].[Nr_Dowodu] AS [Nr_Dowodu], 
+    [klienci].[Adres] AS [Adres], 
+    [klienci].[Stan_Konta] AS [Stan_Konta], 
+    [klienci].[Urzadzenie_Mobilne] AS [Urzadzenie_Mobilne], 
+    [klienci].[login] AS [login], 
+    [klienci].[haslo] AS [haslo]
+    FROM [dbo].[klienci] AS [klienci]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="pracownicy" EntityType="Self.pracownicy" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [pracownicy].[ID] AS [ID], 
+    [pracownicy].[Imię] AS [Imię], 
+    [pracownicy].[Nazwisko] AS [Nazwisko], 
+    [pracownicy].[Pesel] AS [Pesel], 
+    [pracownicy].[Stanowisko] AS [Stanowisko], 
+    [pracownicy].[Przełożony] AS [Przełożony]
+    FROM [dbo].[pracownicy] AS [pracownicy]</DefiningQuery>
+          </EntitySet>
         </EntityContainer>
       </Schema></edmx:StorageModels>
     <!-- CSDL content -->
@@ -167,7 +318,6 @@
             <Parameter Name="pensja" Mode="In" Type="Double" />
           </FunctionImport>
           <EntitySet Name="Klient_ARCH" EntityType="BankowoscEntities.Klient_ARCH" />
-          <EntitySet Name="Pracownik_ARCH" EntityType="BankowoscEntities.Pracownik_ARCH" />
           <FunctionImport Name="zatrudnij">
             <Parameter Name="imie" Mode="In" Type="String" />
             <Parameter Name="nazwisko" Mode="In" Type="String" />
@@ -182,6 +332,27 @@
           <FunctionImport Name="zwolnij">
             <Parameter Name="id" Mode="In" Type="Int32" />
             <Parameter Name="data" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="exklienci" EntityType="BankowoscEntities.exklienci" />
+          <EntitySet Name="expracownicy" EntityType="BankowoscEntities.expracownicy" />
+          <EntitySet Name="klienci" EntityType="BankowoscEntities.klienci" />
+          <EntitySet Name="pracownicy" EntityType="BankowoscEntities.pracownicy" />
+          <FunctionImport Name="zwolnij1">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="data" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <EntitySet Name="Pracownik_ARCH" EntityType="BankowoscEntities.Pracownik_ARCH" />
+          <FunctionImport Name="zwolnij2">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="data" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="zwolnij3">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="data" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="zwolnienie">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="date" Mode="In" Type="DateTime" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="Klient_ARCH">
@@ -199,9 +370,40 @@
           <Property Name="login" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
           <Property Name="haslo" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
         </EntityType>
-        <EntityType Name="Pracownik_ARCH">
+        <EntityType Name="exklienci">
           <Key>
             <PropertyRef Name="ID" />
+            <PropertyRef Name="Imię" />
+            <PropertyRef Name="Nazwisko" />
+            <PropertyRef Name="Pesel" />
+            <PropertyRef Name="Nr_Dowodu" />
+            <PropertyRef Name="Adres" />
+            <PropertyRef Name="Stan_Konta" />
+            <PropertyRef Name="login" />
+            <PropertyRef Name="haslo" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Imię" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Nazwisko" Type="String" Nullable="false" MaxLength="27" FixedLength="false" Unicode="false" />
+          <Property Name="Pesel" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="Nr_Dowodu" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="Adres" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Stan_Konta" Type="Double" Nullable="false" />
+          <Property Name="Urzadzenie_Mobilne" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="login" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="haslo" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="expracownicy">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Imię" />
+            <PropertyRef Name="Nazwisko" />
+            <PropertyRef Name="Pesel" />
+            <PropertyRef Name="Stanowisko" />
+            <PropertyRef Name="Nr_Komputera" />
+            <PropertyRef Name="Pensja" />
+            <PropertyRef Name="login" />
+            <PropertyRef Name="haslo" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Imię" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
@@ -214,6 +416,61 @@
           <Property Name="login" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
           <Property Name="haslo" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
           <Property Name="data_zwolnienia" Type="DateTime" Precision="0" />
+        </EntityType>
+        <EntityType Name="klienci">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Imię" />
+            <PropertyRef Name="Nazwisko" />
+            <PropertyRef Name="Pesel" />
+            <PropertyRef Name="Nr_Dowodu" />
+            <PropertyRef Name="Adres" />
+            <PropertyRef Name="Stan_Konta" />
+            <PropertyRef Name="login" />
+            <PropertyRef Name="haslo" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Imię" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Nazwisko" Type="String" Nullable="false" MaxLength="27" FixedLength="false" Unicode="false" />
+          <Property Name="Pesel" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="Nr_Dowodu" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+          <Property Name="Adres" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Stan_Konta" Type="Double" Nullable="false" />
+          <Property Name="Urzadzenie_Mobilne" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="login" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="haslo" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="pracownicy">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="Imię" />
+            <PropertyRef Name="Nazwisko" />
+            <PropertyRef Name="Pesel" />
+            <PropertyRef Name="Stanowisko" />
+            <PropertyRef Name="Przełożony" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Imię" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Nazwisko" Type="String" Nullable="false" MaxLength="27" FixedLength="false" Unicode="false" />
+          <Property Name="Pesel" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="Stanowisko" Type="String" Nullable="false" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="Przełożony" Type="String" Nullable="false" MaxLength="41" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Pracownik_ARCH">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Imię" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="Nazwisko" Type="String" Nullable="false" MaxLength="27" FixedLength="false" Unicode="false" />
+          <Property Name="Pesel" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+          <Property Name="Stanowisko" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Nr_Komputera" Type="Int32" Nullable="false" />
+          <Property Name="Przełożony" Type="Int32" Nullable="false" />
+          <Property Name="Pensja" Type="Double" Nullable="false" />
+          <Property Name="login" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+          <Property Name="haslo" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="Data_zwolnienia" Type="DateTime" Precision="0" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -281,9 +538,26 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Pracownik_ARCH">
-            <EntityTypeMapping TypeName="BankowoscEntities.Pracownik_ARCH">
-              <MappingFragment StoreEntitySet="Pracownik_ARCH">
+          <FunctionImportMapping FunctionImportName="zatrudnij" FunctionName="BankowoscEntities.Store.zatrudnij" />
+          <EntitySetMapping Name="exklienci">
+            <EntityTypeMapping TypeName="BankowoscEntities.exklienci">
+              <MappingFragment StoreEntitySet="exklienci">
+                <ScalarProperty Name="haslo" ColumnName="haslo" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="Urzadzenie_Mobilne" ColumnName="Urzadzenie_Mobilne" />
+                <ScalarProperty Name="Stan_Konta" ColumnName="Stan_Konta" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Nr_Dowodu" ColumnName="Nr_Dowodu" />
+                <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Imię" ColumnName="Imię" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="expracownicy">
+            <EntityTypeMapping TypeName="BankowoscEntities.expracownicy">
+              <MappingFragment StoreEntitySet="expracownicy">
                 <ScalarProperty Name="data_zwolnienia" ColumnName="data_zwolnienia" />
                 <ScalarProperty Name="haslo" ColumnName="haslo" />
                 <ScalarProperty Name="login" ColumnName="login" />
@@ -298,8 +572,53 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <FunctionImportMapping FunctionImportName="zatrudnij" FunctionName="BankowoscEntities.Store.zatrudnij" />
-          <FunctionImportMapping FunctionImportName="zwolnij" FunctionName="BankowoscEntities.Store.zwolnij" />
+          <EntitySetMapping Name="klienci">
+            <EntityTypeMapping TypeName="BankowoscEntities.klienci">
+              <MappingFragment StoreEntitySet="klienci">
+                <ScalarProperty Name="haslo" ColumnName="haslo" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="Urzadzenie_Mobilne" ColumnName="Urzadzenie_Mobilne" />
+                <ScalarProperty Name="Stan_Konta" ColumnName="Stan_Konta" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+                <ScalarProperty Name="Nr_Dowodu" ColumnName="Nr_Dowodu" />
+                <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Imię" ColumnName="Imię" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="pracownicy">
+            <EntityTypeMapping TypeName="BankowoscEntities.pracownicy">
+              <MappingFragment StoreEntitySet="pracownicy">
+                <ScalarProperty Name="Przełożony" ColumnName="Przełożony" />
+                <ScalarProperty Name="Stanowisko" ColumnName="Stanowisko" />
+                <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Imię" ColumnName="Imię" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pracownik_ARCH">
+            <EntityTypeMapping TypeName="BankowoscEntities.Pracownik_ARCH">
+              <MappingFragment StoreEntitySet="Pracownik_ARCH">
+                <ScalarProperty Name="Data_zwolnienia" ColumnName="Data_zwolnienia" />
+                <ScalarProperty Name="haslo" ColumnName="haslo" />
+                <ScalarProperty Name="login" ColumnName="login" />
+                <ScalarProperty Name="Pensja" ColumnName="Pensja" />
+                <ScalarProperty Name="Przełożony" ColumnName="Przełożony" />
+                <ScalarProperty Name="Nr_Komputera" ColumnName="Nr_Komputera" />
+                <ScalarProperty Name="Stanowisko" ColumnName="Stanowisko" />
+                <ScalarProperty Name="Pesel" ColumnName="Pesel" />
+                <ScalarProperty Name="Nazwisko" ColumnName="Nazwisko" />
+                <ScalarProperty Name="Imię" ColumnName="Imię" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="zwolnij3" FunctionName="BankowoscEntities.Store.zwolnij" />
+          <FunctionImportMapping FunctionImportName="zwolnienie" FunctionName="BankowoscEntities.Store.zwolnienie" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

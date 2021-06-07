@@ -25,7 +25,8 @@ namespace PBank {
             form.Visible = true;
         }
         private void search_Click(object sender, EventArgs e) {
-
+            FormWyswietlDane formW = new FormWyswietlDane();
+            formW.ShowDialog();
         }
 
         private void awans_Click(object sender, EventArgs e) {
@@ -34,7 +35,6 @@ namespace PBank {
         }
 
         private void degradacja_Click(object sender, EventArgs e) {
-            //MessageBox.Show(this.idosoby.ToString());
             int id = this.idosoby;
             FormDegradacja formD = new FormDegradacja(50, id);
             
@@ -44,6 +44,14 @@ namespace PBank {
         private void paychange_Click(object sender, EventArgs e) {
             FormZmianaPlacy formZP = new FormZmianaPlacy(50, this.idosoby);
             formZP.ShowDialog();
+        }
+
+        private void Zatrudnij_Click(object sender, EventArgs e) {
+            FormZatrudnij formZ = new FormZatrudnij(50);
+            formZ.ShowDialog();
+        }
+
+        private void Zwolnij_Click(object sender, EventArgs e) {
         }
     }
 }

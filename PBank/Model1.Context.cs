@@ -31,6 +31,10 @@ namespace PBank
         public virtual DbSet<Klient> Klient { get; set; }
         public virtual DbSet<Pracownik> Pracownik { get; set; }
         public virtual DbSet<Klient_ARCH> Klient_ARCH { get; set; }
+        public virtual DbSet<exklienci> exklienci { get; set; }
+        public virtual DbSet<expracownicy> expracownicy { get; set; }
+        public virtual DbSet<klienci> klienci { get; set; }
+        public virtual DbSet<pracownicy> pracownicy { get; set; }
         public virtual DbSet<Pracownik_ARCH> Pracownik_ARCH { get; set; }
     
         public virtual int Awans(string stanowisko, Nullable<int> id)
@@ -128,6 +132,58 @@ namespace PBank
                 new ObjectParameter("data", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("zwolnij", idParameter, dataParameter);
+        }
+    
+        public virtual int zwolnij1(Nullable<int> id, Nullable<System.DateTime> data)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var dataParameter = data.HasValue ?
+                new ObjectParameter("data", data) :
+                new ObjectParameter("data", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("zwolnij1", idParameter, dataParameter);
+        }
+    
+        public virtual int zwolnij2(Nullable<int> id, Nullable<System.DateTime> data)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var dataParameter = data.HasValue ?
+                new ObjectParameter("data", data) :
+                new ObjectParameter("data", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("zwolnij2", idParameter, dataParameter);
+        }
+    
+        public virtual int zwolnij3(Nullable<int> id, Nullable<System.DateTime> data)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var dataParameter = data.HasValue ?
+                new ObjectParameter("data", data) :
+                new ObjectParameter("data", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("zwolnij3", idParameter, dataParameter);
+        }
+    
+        public virtual int zwolnienie(Nullable<int> id, Nullable<System.DateTime> date)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var dateParameter = date.HasValue ?
+                new ObjectParameter("date", date) :
+                new ObjectParameter("date", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("zwolnienie", idParameter, dateParameter);
         }
     }
 }

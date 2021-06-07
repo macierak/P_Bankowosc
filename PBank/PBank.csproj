@@ -70,6 +70,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="exklienci.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="expracownicy.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="FormDegradacja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="FormAwans.Designer.cs">
       <DependentUpon>FormAwans.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormWyswietlDane.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWyswietlDane.Designer.cs">
+      <DependentUpon>FormWyswietlDane.cs</DependentUpon>
     </Compile>
     <Compile Include="FormZatrudnij.cs">
       <SubType>Form</SubType>
@@ -94,7 +106,16 @@
     <Compile Include="FormZmianaPlacy.Designer.cs">
       <DependentUpon>FormZmianaPlacy.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormZwolnij.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormZwolnij.Designer.cs">
+      <DependentUpon>FormZwolnij.cs</DependentUpon>
+    </Compile>
     <Compile Include="Karta.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="klienci.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Klient.cs">
@@ -117,6 +138,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="pracownicy.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Pracownik.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -179,11 +203,17 @@
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormWyswietlDane.resx">
+      <DependentUpon>FormWyswietlDane.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormZatrudnij.resx">
       <DependentUpon>FormZatrudnij.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormZmianaPlacy.resx">
       <DependentUpon>FormZmianaPlacy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormZwolnij.resx">
+      <DependentUpon>FormZwolnij.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
