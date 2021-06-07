@@ -52,21 +52,27 @@ namespace PBank {
                 }
             }
             catch(System.FormatException) {
-                BrakPensji.Visible = true;
+                
             }
             Pensja2.Text = "";
         }
 
-        private void FormAwans_Load(object sender, EventArgs e) {
 
+        private void label1_MouseUp(object sender, MouseEventArgs e) {
+            label1.BackColor = System.Drawing.Color.DarkCyan;
+        }
+
+        private void label1_MouseDown(object sender, MouseEventArgs e) {
+            label1.BackColor = System.Drawing.Color.DarkSlateGray;
+        }
+
+        private void Pensja2_Click(object sender, EventArgs e) {
+            Pensja2.Text = "";
         }
 
         private void Osoba_Click(object sender, EventArgs e) {
-            Pensja1.Visible = true;
-            Pensja2.Visible = true;
-            label_nowapensja.Visible = true;
-            label_pensja.Visible = true;
-            Pensja1.Text = this.pensja[Osoba.SelectedIndex];
+            
+            Pensja2.Text = this.pensja[Osoba.SelectedIndex];
             try {
                 string stanowisko = Osoba.SelectedItem.ToString();
                 this.id = IdTab[Osoba.SelectedIndex];

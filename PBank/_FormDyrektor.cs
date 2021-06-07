@@ -84,7 +84,8 @@ namespace PBank {
 
 
         private void Zatrudnienie_Click(object sender, EventArgs e) {
-
+            FormZatrudnij formZ = new FormZatrudnij(100);
+            formZ.ShowDialog();
         }
         private void Zatrudnienie_MouseDown(object sender, MouseEventArgs e) {
             Zatrudnienie.BackColor = System.Drawing.Color.DarkSlateGray;

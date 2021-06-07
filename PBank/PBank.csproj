@@ -199,6 +199,9 @@
     <EmbeddedResource Include="_FormKlient.resx">
       <DependentUpon>_FormKlient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="_FormKonsultant.resx">
+      <DependentUpon>_FormKonsultant.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="_FormZarzadca.resx">
       <DependentUpon>_FormZarzadca.cs</DependentUpon>
     </EmbeddedResource>
@@ -247,6 +250,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\korwin.jpg" />
+    <None Include="Resources\tenor.gif" />
+    <None Include="Resources\smacznej-kawusi-gif.jpg" />
+    <None Include="Resources\ding.wav" />
     <None Include="graphics\loupe.png" />
     <None Include="graphics\arrow_up.png" />
     <None Include="graphics\arrow_down.png" />

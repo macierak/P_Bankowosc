@@ -27,5 +27,29 @@ namespace PBank {
         private void _FormAsystent_FormClosing(object sender, FormClosingEventArgs e) {
             form.Visible = true;
         }
+
+        private void timer1_Tick(object sender, EventArgs e) {
+            if (pb.Value < 100) {
+                pb.Value += 1;
+            }
+            else {
+                timer1.Enabled = false;
+                pb.Visible = false;
+                label1.Visible = true;
+                System.IO.Stream ding = Properties.Resources.ding;
+                System.Media.SoundPlayer kawa = new System.Media.SoundPlayer(ding);
+                kawa.Play();
+                pictureBox1.Image = Properties.Resources.smacznej_kawusi_gif;
+            }         
+        }
+
+        private void label1_Click(object sender, EventArgs e) {
+            pb.Value = 0;
+            timer1.Enabled = true;
+            label1.Visible = false;
+            pb.Visible = true;
+            pictureBox1.Visible = true;
+            pictureBox1.Image = Properties.Resources.tenor;
+        }
     }
 }
