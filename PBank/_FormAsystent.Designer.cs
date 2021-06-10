@@ -34,7 +34,7 @@ namespace PBank {
             // 
             // pb
             // 
-            this.pb.BackColor = System.Drawing.Color.LightCyan;
+            this.pb.BackColor = System.Drawing.Color.WhiteSmoke;
             this.pb.ForeColor = System.Drawing.Color.DarkCyan;
             this.pb.Location = new System.Drawing.Point(0, 420);
             this.pb.Name = "pb";

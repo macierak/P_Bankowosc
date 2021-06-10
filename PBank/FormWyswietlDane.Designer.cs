@@ -28,8 +28,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menu = new System.Windows.Forms.ToolStripMenuItem();
-            this.klienci = new System.Windows.Forms.ToolStripMenuItem();
             this.pracownicy = new System.Windows.Forms.ToolStripMenuItem();
+            this.klienci = new System.Windows.Forms.ToolStripMenuItem();
             this.exPracownicy = new System.Windows.Forms.ToolStripMenuItem();
             this.exKlienci = new System.Windows.Forms.ToolStripMenuItem();
             this.dane = new System.Windows.Forms.DataGridView();
@@ -61,16 +61,6 @@
             this.menu.Size = new System.Drawing.Size(92, 33);
             this.menu.Text = "Tabele";
             // 
-            // klienci
-            // 
-            this.klienci.BackColor = System.Drawing.Color.DarkCyan;
-            this.klienci.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.klienci.ForeColor = System.Drawing.Color.White;
-            this.klienci.Name = "klienci";
-            this.klienci.Size = new System.Drawing.Size(233, 34);
-            this.klienci.Text = "Klienci";
-            this.klienci.Click += new System.EventHandler(this.klienci_Click);
-            // 
             // pracownicy
             // 
             this.pracownicy.BackColor = System.Drawing.Color.DarkCyan;
@@ -80,6 +70,16 @@
             this.pracownicy.Size = new System.Drawing.Size(233, 34);
             this.pracownicy.Text = "Pracownicy";
             this.pracownicy.Click += new System.EventHandler(this.pracownicy_Click);
+            // 
+            // klienci
+            // 
+            this.klienci.BackColor = System.Drawing.Color.DarkCyan;
+            this.klienci.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.klienci.ForeColor = System.Drawing.Color.White;
+            this.klienci.Name = "klienci";
+            this.klienci.Size = new System.Drawing.Size(233, 34);
+            this.klienci.Text = "Klienci";
+            this.klienci.Click += new System.EventHandler(this.klienci_Click);
             // 
             // exPracownicy
             // 
@@ -151,7 +151,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormWyswietlDane";
-            this.Text = "FormWyswietlDane";
+            this.Text = "Pokaż dane";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dane)).EndInit();

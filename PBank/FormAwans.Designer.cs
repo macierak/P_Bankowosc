@@ -29,6 +29,7 @@ namespace PBank {
             this.Pensja2 = new System.Windows.Forms.TextBox();
             this.label_nowapensja = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Osoba
@@ -37,9 +38,9 @@ namespace PBank {
             this.Osoba.ForeColor = System.Drawing.Color.DarkCyan;
             this.Osoba.FormattingEnabled = true;
             this.Osoba.ItemHeight = 26;
-            this.Osoba.Location = new System.Drawing.Point(25, 27);
+            this.Osoba.Location = new System.Drawing.Point(25, 105);
             this.Osoba.Name = "Osoba";
-            this.Osoba.Size = new System.Drawing.Size(534, 394);
+            this.Osoba.Size = new System.Drawing.Size(534, 316);
             this.Osoba.TabIndex = 0;
             this.Osoba.Click += new System.EventHandler(this.Osoba_Click);
             // 
@@ -95,6 +96,18 @@ namespace PBank {
             this.label1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.label1_MouseDown);
             this.label1.MouseUp += new System.Windows.Forms.MouseEventHandler(this.label1_MouseUp);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Candara Light", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label4.ForeColor = System.Drawing.Color.DarkCyan;
+            this.label4.Location = new System.Drawing.Point(15, 29);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(178, 59);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "AWANS";
+            // 
             // FormAwans
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -103,6 +116,7 @@ namespace PBank {
             this.BackgroundImage = global::PBank.Properties.Resources.bg;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label_nowapensja);
             this.Controls.Add(this.Pensja2);
@@ -122,5 +136,6 @@ namespace PBank {
         private System.Windows.Forms.TextBox Pensja2;
         private System.Windows.Forms.Label label_nowapensja;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label4;
     }
 }
