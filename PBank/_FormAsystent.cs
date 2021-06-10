@@ -19,13 +19,9 @@ namespace PBank {
             this.form = form;
         }
 
-        private void _FormAsystent_Leave(object sender, EventArgs e) {
-            
-            
-        }
-
         private void _FormAsystent_FormClosing(object sender, FormClosingEventArgs e) {
             form.Visible = true;
+            timer1.Enabled = false;
         }
 
         private void timer1_Tick(object sender, EventArgs e) {
@@ -39,7 +35,7 @@ namespace PBank {
                 System.IO.Stream ding = Properties.Resources.ding;
                 System.Media.SoundPlayer kawa = new System.Media.SoundPlayer(ding);
                 kawa.Play();
-                pictureBox1.Image = Properties.Resources.korwin;
+                pictureBox1.Image = Properties.Resources.smacznej_kawusi_gif;
             }         
         }
 

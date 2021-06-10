@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\PBank"
   ],
-  "SelectedNode": "\\PBank.sln",
+  "SelectedNode": "\\PBank\\PBank.csproj",
   "PreviewInSolutionExplorer": false
 }

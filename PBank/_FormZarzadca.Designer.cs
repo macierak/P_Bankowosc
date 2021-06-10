@@ -24,12 +24,15 @@ namespace PBank {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(_FormZarzadca));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.Degradacja = new System.Windows.Forms.Label();
             this.Awans = new System.Windows.Forms.Label();
             this.Search = new System.Windows.Forms.Label();
             this.Paychange = new System.Windows.Forms.Label();
+            this.Zatrudnienie = new System.Windows.Forms.Label();
+            this.Zwolnienie = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -116,7 +119,7 @@ namespace PBank {
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(150, 100);
             this.Search.TabIndex = 11;
-            this.Search.Text = "Wyszukaj w bazie";
+            this.Search.Text = "Pokaż \r\nw bazie";
             this.Search.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             this.Search.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Search_MouseDown);
@@ -130,7 +133,7 @@ namespace PBank {
             this.Paychange.ForeColor = System.Drawing.Color.White;
             this.Paychange.Image = global::PBank.Properties.Resources.change;
             this.Paychange.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Paychange.Location = new System.Drawing.Point(270, 150);
+            this.Paychange.Location = new System.Drawing.Point(586, 285);
             this.Paychange.MaximumSize = new System.Drawing.Size(150, 100);
             this.Paychange.MinimumSize = new System.Drawing.Size(150, 100);
             this.Paychange.Name = "Paychange";
@@ -142,6 +145,44 @@ namespace PBank {
             this.Paychange.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Paychange_MouseDown);
             this.Paychange.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Paychange_MouseUp);
             // 
+            // Zatrudnienie
+            // 
+            this.Zatrudnienie.AutoSize = true;
+            this.Zatrudnienie.BackColor = System.Drawing.Color.DarkCyan;
+            this.Zatrudnienie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Zatrudnienie.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Zatrudnienie.ForeColor = System.Drawing.Color.White;
+            this.Zatrudnienie.Image = ((System.Drawing.Image)(resources.GetObject("Zatrudnienie.Image")));
+            this.Zatrudnienie.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Zatrudnienie.Location = new System.Drawing.Point(481, 150);
+            this.Zatrudnienie.MaximumSize = new System.Drawing.Size(150, 100);
+            this.Zatrudnienie.MinimumSize = new System.Drawing.Size(150, 100);
+            this.Zatrudnienie.Name = "Zatrudnienie";
+            this.Zatrudnienie.Size = new System.Drawing.Size(150, 100);
+            this.Zatrudnienie.TabIndex = 16;
+            this.Zatrudnienie.Text = "Zatrudnij\r\n";
+            this.Zatrudnienie.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Zatrudnienie.Click += new System.EventHandler(this.Zatrudnienie_Click);
+            // 
+            // Zwolnienie
+            // 
+            this.Zwolnienie.AutoSize = true;
+            this.Zwolnienie.BackColor = System.Drawing.Color.DarkCyan;
+            this.Zwolnienie.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Zwolnienie.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Zwolnienie.ForeColor = System.Drawing.Color.White;
+            this.Zwolnienie.Image = ((System.Drawing.Image)(resources.GetObject("Zwolnienie.Image")));
+            this.Zwolnienie.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Zwolnienie.Location = new System.Drawing.Point(271, 150);
+            this.Zwolnienie.MaximumSize = new System.Drawing.Size(150, 100);
+            this.Zwolnienie.MinimumSize = new System.Drawing.Size(150, 100);
+            this.Zwolnienie.Name = "Zwolnienie";
+            this.Zwolnienie.Size = new System.Drawing.Size(150, 100);
+            this.Zwolnienie.TabIndex = 15;
+            this.Zwolnienie.Text = "Zwolnij\r\n";
+            this.Zwolnienie.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Zwolnienie.Click += new System.EventHandler(this.Zwolnienie_Click);
+            // 
             // _FormZarzadca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,6 +190,8 @@ namespace PBank {
             this.BackgroundImage = global::PBank.Properties.Resources.bg1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Zatrudnienie);
+            this.Controls.Add(this.Zwolnienie);
             this.Controls.Add(this.Paychange);
             this.Controls.Add(this.Degradacja);
             this.Controls.Add(this.Awans);
@@ -158,7 +201,6 @@ namespace PBank {
             this.Name = "_FormZarzadca";
             this.Text = "_FormZarzadca";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._FormZarzadca_FormClosing);
-            this.Load += new System.EventHandler(this._FormZarzadca_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +213,7 @@ namespace PBank {
         private System.Windows.Forms.Label Awans;
         private System.Windows.Forms.Label Search;
         private System.Windows.Forms.Label Paychange;
+        private System.Windows.Forms.Label Zatrudnienie;
+        private System.Windows.Forms.Label Zwolnienie;
     }
 }

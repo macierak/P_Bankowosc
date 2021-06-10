@@ -123,11 +123,13 @@ namespace PBank {
             this.Update.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Update.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.Update.ForeColor = System.Drawing.Color.White;
-            this.Update.Location = new System.Drawing.Point(600, 195);
-            this.Update.MaximumSize = new System.Drawing.Size(150, 90);
-            this.Update.MinimumSize = new System.Drawing.Size(150, 90);
+            this.Update.Image = global::PBank.Properties.Resources.change;
+            this.Update.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Update.Location = new System.Drawing.Point(595, 193);
+            this.Update.MaximumSize = new System.Drawing.Size(150, 100);
+            this.Update.MinimumSize = new System.Drawing.Size(150, 100);
             this.Update.Name = "Update";
-            this.Update.Size = new System.Drawing.Size(150, 90);
+            this.Update.Size = new System.Drawing.Size(150, 100);
             this.Update.TabIndex = 9;
             this.Update.Text = "Aktualizuj\r\n";
             this.Update.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -150,7 +152,7 @@ namespace PBank {
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Name = "FormZmianaPlacy";
-            this.Text = "FormZmianaPlacy";
+            this.Text = "Zmiana płacy";
             this.ResumeLayout(false);
             this.PerformLayout();
 

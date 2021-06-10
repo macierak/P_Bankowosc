@@ -181,7 +181,7 @@ namespace PBank {
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(150, 100);
             this.Search.TabIndex = 8;
-            this.Search.Text = "Wyszukaj w bazie";
+            this.Search.Text = "Pokaż \r\nw bazie";
             this.Search.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             this.Search.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Search_MouseDown);
@@ -205,7 +205,6 @@ namespace PBank {
             this.Name = "_FormDyrektor";
             this.Text = "_FormDyrektor";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._FormDyrektor_FormClosing);
-            this.Load += new System.EventHandler(this._FormDyrektor_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

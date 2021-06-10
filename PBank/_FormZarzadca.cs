@@ -27,7 +27,8 @@ namespace PBank {
 
 
         private void Search_Click(object sender, EventArgs e) {
-
+            FormWyswietlDane formD = new FormWyswietlDane();
+            formD.ShowDialog();
         }
         private void Search_MouseDown(object sender, MouseEventArgs e) {
             Search.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -75,8 +76,14 @@ namespace PBank {
             Paychange.BackColor = System.Drawing.Color.DarkCyan;
         }
 
-        private void _FormZarzadca_Load(object sender, EventArgs e) {
+        private void Zwolnienie_Click(object sender, EventArgs e) {
+            FormZwolnij formZwolnij = new FormZwolnij(this.idosoby, 50);
+            formZwolnij.ShowDialog();
+        }
 
+        private void Zatrudnienie_Click(object sender, EventArgs e) {
+            FormZatrudnij formZ = new FormZatrudnij(50);
+            formZ.ShowDialog();
         }
     }
 }

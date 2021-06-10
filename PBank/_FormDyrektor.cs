@@ -23,11 +23,10 @@ namespace PBank {
         private void _FormDyrektor_FormClosing(object sender, FormClosingEventArgs e) {
             form.Visible = true;
         }
-        private void _FormDyrektor_Load(object sender, EventArgs e) {
-        }
 
         private void Search_Click(object sender, EventArgs e) {
-
+            FormWyswietlDane formD = new FormWyswietlDane();
+            formD.ShowDialog();
         }
         private void Search_MouseDown(object sender, MouseEventArgs e) {
             Search.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -74,7 +73,7 @@ namespace PBank {
 
 
         private void Zwolnienie_Click(object sender, EventArgs e) {
-            FormZwolnij formZwolnij = new FormZwolnij(this.ID);
+            FormZwolnij formZwolnij = new FormZwolnij(this.ID, 100);
             formZwolnij.ShowDialog();
         }
         private void Zwolnienie_MouseDown(object sender, MouseEventArgs e) {
