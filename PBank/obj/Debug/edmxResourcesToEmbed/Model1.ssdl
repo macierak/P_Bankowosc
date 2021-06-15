@@ -34,10 +34,10 @@
     <Property Name="Pesel" Type="varchar" MaxLength="11" Nullable="false" />
     <Property Name="Nr_Dowodu" Type="varchar" MaxLength="9" Nullable="false" />
     <Property Name="Adres" Type="varchar" MaxLength="100" Nullable="false" />
-    <Property Name="Stan_Konta" Type="float" Nullable="false" />
     <Property Name="Urzadzenie_Mobilne" Type="varchar" MaxLength="15" />
     <Property Name="login" Type="varchar" MaxLength="12" Nullable="false" />
     <Property Name="haslo" Type="varchar" MaxLength="16" Nullable="false" />
+    <Property Name="Data_Usuniecia" Type="date" />
   </EntityType>
   <EntityType Name="Pracownik">
     <Key>
@@ -164,6 +164,16 @@ warning 6002: The table/view 'P_Bankowosc.dbo.pracownicy' does not have a primar
     <Property Name="Stanowisko" Type="varchar" MaxLength="32" Nullable="false" />
     <Property Name="Przełożony" Type="varchar" MaxLength="41" Nullable="false" />
   </EntityType>
+  <Function Name="dodaj" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="imie" Type="varchar" Mode="In" />
+    <Parameter Name="nazwisko" Type="varchar" Mode="In" />
+    <Parameter Name="pesel" Type="varchar" Mode="In" />
+    <Parameter Name="nr_dowodu" Type="varchar" Mode="In" />
+    <Parameter Name="adres" Type="varchar" Mode="In" />
+    <Parameter Name="urzadzenie_mobilne" Type="varchar" Mode="In" />
+    <Parameter Name="login" Type="varchar" Mode="In" />
+    <Parameter Name="haslo" Type="varchar" Mode="In" />
+  </Function>
   <Function Name="pay_manage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="id" Type="int" Mode="In" />
     <Parameter Name="pensja" Type="float" Mode="In" />
@@ -172,6 +182,10 @@ warning 6002: The table/view 'P_Bankowosc.dbo.pracownicy' does not have a primar
     <Parameter Name="stanowisko" Type="nvarchar" Mode="In" />
     <Parameter Name="id" Type="int" Mode="In" />
     <Parameter Name="pensja" Type="float" Mode="In" />
+  </Function>
+  <Function Name="usun" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="date" Type="date" Mode="In" />
   </Function>
   <Function Name="zatrudnij" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
     <Parameter Name="imie" Type="varchar" Mode="In" />

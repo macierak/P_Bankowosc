@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace PBank {
     public partial class FormZatrudnij : Form {
-        public TextBox[] tekst;
+        private TextBox[] tekst;
         bool isCorrect = true;
         public FormZatrudnij(int permlvl) {
             InitializeComponent();
@@ -69,7 +69,6 @@ namespace PBank {
 
         private void label10_MouseDown(object sender, MouseEventArgs e) {
             label10.BackColor = System.Drawing.Color.DarkSlateGray;
-            
         }
         private void FormZatrudnij_Load(object sender, EventArgs e) {
         }

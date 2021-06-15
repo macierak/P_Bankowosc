@@ -20,9 +20,9 @@ namespace PBank
         public string Pesel { get; set; }
         public string Nr_Dowodu { get; set; }
         public string Adres { get; set; }
-        public double Stan_Konta { get; set; }
         public string Urzadzenie_Mobilne { get; set; }
         public string login { get; set; }
         public string haslo { get; set; }
+        public Nullable<System.DateTime> Data_Usuniecia { get; set; }
     }
 }

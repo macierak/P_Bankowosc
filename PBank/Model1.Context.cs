@@ -30,12 +30,12 @@ namespace PBank
         public virtual DbSet<Karta> Karta { get; set; }
         public virtual DbSet<Klient> Klient { get; set; }
         public virtual DbSet<Pracownik> Pracownik { get; set; }
-        public virtual DbSet<Klient_ARCH> Klient_ARCH { get; set; }
         public virtual DbSet<exklienci> exklienci { get; set; }
         public virtual DbSet<expracownicy> expracownicy { get; set; }
         public virtual DbSet<klienci> klienci { get; set; }
         public virtual DbSet<pracownicy> pracownicy { get; set; }
         public virtual DbSet<Pracownik_ARCH> Pracownik_ARCH { get; set; }
+        public virtual DbSet<Klient_ARCH> Klient_ARCH { get; set; }
     
         public virtual int Awans(string stanowisko, Nullable<int> id)
         {
@@ -184,6 +184,56 @@ namespace PBank
                 new ObjectParameter("date", typeof(System.DateTime));
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("zwolnienie", idParameter, dateParameter);
+        }
+    
+        public virtual int usun(Nullable<int> id, Nullable<System.DateTime> date)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var dateParameter = date.HasValue ?
+                new ObjectParameter("date", date) :
+                new ObjectParameter("date", typeof(System.DateTime));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("usun", idParameter, dateParameter);
+        }
+    
+        public virtual int dodaj(string imie, string nazwisko, string pesel, string nr_dowodu, string adres, string urzadzenie_mobilne, string login, string haslo)
+        {
+            var imieParameter = imie != null ?
+                new ObjectParameter("imie", imie) :
+                new ObjectParameter("imie", typeof(string));
+    
+            var nazwiskoParameter = nazwisko != null ?
+                new ObjectParameter("nazwisko", nazwisko) :
+                new ObjectParameter("nazwisko", typeof(string));
+    
+            var peselParameter = pesel != null ?
+                new ObjectParameter("pesel", pesel) :
+                new ObjectParameter("pesel", typeof(string));
+    
+            var nr_dowoduParameter = nr_dowodu != null ?
+                new ObjectParameter("nr_dowodu", nr_dowodu) :
+                new ObjectParameter("nr_dowodu", typeof(string));
+    
+            var adresParameter = adres != null ?
+                new ObjectParameter("adres", adres) :
+                new ObjectParameter("adres", typeof(string));
+    
+            var urzadzenie_mobilneParameter = urzadzenie_mobilne != null ?
+                new ObjectParameter("urzadzenie_mobilne", urzadzenie_mobilne) :
+                new ObjectParameter("urzadzenie_mobilne", typeof(string));
+    
+            var loginParameter = login != null ?
+                new ObjectParameter("login", login) :
+                new ObjectParameter("login", typeof(string));
+    
+            var hasloParameter = haslo != null ?
+                new ObjectParameter("haslo", haslo) :
+                new ObjectParameter("haslo", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("dodaj", imieParameter, nazwiskoParameter, peselParameter, nr_dowoduParameter, adresParameter, urzadzenie_mobilneParameter, loginParameter, hasloParameter);
         }
     }
 }

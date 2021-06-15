@@ -76,6 +76,24 @@
     <Compile Include="expracownicy.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="FormDodajKient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDodajKient.Designer.cs">
+      <DependentUpon>FormDodajKient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormPotwierdzUsun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPotwierdzUsun.Designer.cs">
+      <DependentUpon>FormPotwierdzUsun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormUsunKlient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUsunKlient.Designer.cs">
+      <DependentUpon>FormUsunKlient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDegradacja.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -197,11 +215,20 @@
     <EmbeddedResource Include="FormAwans.resx">
       <DependentUpon>FormAwans.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDodajKient.resx">
+      <DependentUpon>FormDodajKient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.pl-PL.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPotwierdzUsun.resx">
+      <DependentUpon>FormPotwierdzUsun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUsunKlient.resx">
+      <DependentUpon>FormUsunKlient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormWyswietlDane.resx">
       <DependentUpon>FormWyswietlDane.cs</DependentUpon>

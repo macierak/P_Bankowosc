@@ -37,7 +37,7 @@
             this.Osoba.ItemHeight = 26;
             this.Osoba.Location = new System.Drawing.Point(32, 92);
             this.Osoba.Name = "Osoba";
-            this.Osoba.Size = new System.Drawing.Size(416, 316);
+            this.Osoba.Size = new System.Drawing.Size(472, 316);
             this.Osoba.TabIndex = 0;
             this.Osoba.Click += new System.EventHandler(this.Osoba_SelectedIndexChanged);
             // 

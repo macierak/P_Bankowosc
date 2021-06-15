@@ -40,25 +40,27 @@ namespace PBank {
         }
 
         private void zwolnij_Click(object sender, EventArgs e) {
-            string nazwa = "";
-            using (P_BankowoscEntities Dane = new P_BankowoscEntities()) {
-                var zalogowanyP = from p in Dane.Pracownik
-                                  where p.ID == this.selectedID
-                                  select p;
-                foreach (Pracownik p in zalogowanyP) {
-                    nazwa = p.Imię + " " + p.Nazwisko;
-                }
-                string message = "Czy na pewno chcesz zwolnić pracownika\n" + nazwa;
-                string title = "Zwolnienie";
-                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-                DialogResult result = MessageBox.Show(message, title, buttons);
+            if(this.selectedID > 0) {
+                string nazwa = "";
+                using (P_BankowoscEntities Dane = new P_BankowoscEntities()) {
+                    var zalogowanyP = from p in Dane.Pracownik
+                                      where p.ID == this.selectedID
+                                      select p;
+                    foreach (Pracownik p in zalogowanyP) {
+                        nazwa = p.Imię + " " + p.Nazwisko;
+                    }
+                    string message = "Czy na pewno chcesz zwolnić pracownika\n" + nazwa;
+                    string title = "Zwolnienie";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result = MessageBox.Show(message, title, buttons);
 
-                if (result == DialogResult.Yes) {
-                    Dane.zwolnienie(this.selectedID, System.DateTime.Today.Date);
-                    Dane.SaveChanges();
-                    Osoba.Items.Clear();
-                    this.idTab = printDane();
-                    
+                    if (result == DialogResult.Yes) {
+                        Dane.zwolnienie(this.selectedID, System.DateTime.Today.Date);
+                        Dane.SaveChanges();
+                        Osoba.Items.Clear();
+                        this.selectedID = -1;
+                        this.idTab = printDane();
+                    }
                 }
             }
         }

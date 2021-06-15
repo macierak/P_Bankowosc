@@ -56,7 +56,6 @@
       <Parameter Name="id" Mode="In" Type="Int32" />
       <Parameter Name="pensja" Mode="In" Type="Double" />
     </FunctionImport>
-    <EntitySet Name="Klient_ARCH" EntityType="BankowoscEntities.Klient_ARCH" />
     <FunctionImport Name="zatrudnij">
       <Parameter Name="imie" Mode="In" Type="String" />
       <Parameter Name="nazwisko" Mode="In" Type="String" />
@@ -93,22 +92,22 @@
       <Parameter Name="id" Mode="In" Type="Int32" />
       <Parameter Name="date" Mode="In" Type="DateTime" />
     </FunctionImport>
+    <FunctionImport Name="usun">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="date" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="Klient_ARCH" EntityType="BankowoscEntities.Klient_ARCH" />
+    <FunctionImport Name="dodaj">
+      <Parameter Name="imie" Mode="In" Type="String" />
+      <Parameter Name="nazwisko" Mode="In" Type="String" />
+      <Parameter Name="pesel" Mode="In" Type="String" />
+      <Parameter Name="nr_dowodu" Mode="In" Type="String" />
+      <Parameter Name="adres" Mode="In" Type="String" />
+      <Parameter Name="urzadzenie_mobilne" Mode="In" Type="String" />
+      <Parameter Name="login" Mode="In" Type="String" />
+      <Parameter Name="haslo" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
-  <EntityType Name="Klient_ARCH">
-    <Key>
-      <PropertyRef Name="ID" />
-    </Key>
-    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Imię" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
-    <Property Name="Nazwisko" Type="String" Nullable="false" MaxLength="27" FixedLength="false" Unicode="false" />
-    <Property Name="Pesel" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
-    <Property Name="Nr_Dowodu" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
-    <Property Name="Adres" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
-    <Property Name="Stan_Konta" Type="Double" Nullable="false" />
-    <Property Name="Urzadzenie_Mobilne" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
-    <Property Name="login" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
-    <Property Name="haslo" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
-  </EntityType>
   <EntityType Name="exklienci">
     <Key>
       <PropertyRef Name="ID" />
@@ -210,5 +209,20 @@
     <Property Name="login" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
     <Property Name="haslo" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
     <Property Name="Data_zwolnienia" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="Klient_ARCH">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Imię" Type="String" Nullable="false" MaxLength="13" FixedLength="false" Unicode="false" />
+    <Property Name="Nazwisko" Type="String" Nullable="false" MaxLength="27" FixedLength="false" Unicode="false" />
+    <Property Name="Pesel" Type="String" Nullable="false" MaxLength="11" FixedLength="false" Unicode="false" />
+    <Property Name="Nr_Dowodu" Type="String" Nullable="false" MaxLength="9" FixedLength="false" Unicode="false" />
+    <Property Name="Adres" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Urzadzenie_Mobilne" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="login" Type="String" Nullable="false" MaxLength="12" FixedLength="false" Unicode="false" />
+    <Property Name="haslo" Type="String" Nullable="false" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="Data_Usuniecia" Type="DateTime" Precision="0" />
   </EntityType>
 </Schema>

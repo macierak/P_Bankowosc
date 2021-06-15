@@ -24,9 +24,9 @@ namespace PBank {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.Search = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.Remove = new System.Windows.Forms.Label();
+            this.add = new System.Windows.Forms.Label();
+            this.log = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pesel_label = new System.Windows.Forms.Label();
@@ -37,68 +37,71 @@ namespace PBank {
             this.imie = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // Search
+            // Remove
             // 
-            this.Search.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.Remove.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Search.AutoSize = true;
-            this.Search.BackColor = System.Drawing.Color.DarkCyan;
-            this.Search.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Search.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Search.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.Search.ForeColor = System.Drawing.Color.White;
-            this.Search.Image = global::PBank.Properties.Resources.minus;
-            this.Search.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Search.Location = new System.Drawing.Point(563, 273);
-            this.Search.MaximumSize = new System.Drawing.Size(150, 100);
-            this.Search.MinimumSize = new System.Drawing.Size(150, 100);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(150, 100);
-            this.Search.TabIndex = 9;
-            this.Search.Text = "Usuń\r\nklienta";
-            this.Search.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Remove.AutoSize = true;
+            this.Remove.BackColor = System.Drawing.Color.DarkCyan;
+            this.Remove.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.Remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Remove.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Remove.ForeColor = System.Drawing.Color.White;
+            this.Remove.Image = global::PBank.Properties.Resources.minus;
+            this.Remove.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Remove.Location = new System.Drawing.Point(563, 273);
+            this.Remove.MaximumSize = new System.Drawing.Size(150, 100);
+            this.Remove.MinimumSize = new System.Drawing.Size(150, 100);
+            this.Remove.Name = "Remove";
+            this.Remove.Size = new System.Drawing.Size(150, 100);
+            this.Remove.TabIndex = 9;
+            this.Remove.Text = "Usuń\r\nklienta";
+            this.Remove.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.Remove.Click += new System.EventHandler(this.Remove_Click);
             // 
-            // label1
+            // add
             // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.add.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.DarkCyan;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Image = global::PBank.Properties.Resources.plus;
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label1.Location = new System.Drawing.Point(563, 128);
-            this.label1.MaximumSize = new System.Drawing.Size(150, 100);
-            this.label1.MinimumSize = new System.Drawing.Size(150, 100);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(150, 100);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Dodaj nowego\r\nklienta";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.add.AutoSize = true;
+            this.add.BackColor = System.Drawing.Color.DarkCyan;
+            this.add.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.add.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.add.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.add.ForeColor = System.Drawing.Color.White;
+            this.add.Image = global::PBank.Properties.Resources.plus;
+            this.add.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.add.Location = new System.Drawing.Point(563, 128);
+            this.add.MaximumSize = new System.Drawing.Size(150, 100);
+            this.add.MinimumSize = new System.Drawing.Size(150, 100);
+            this.add.Name = "add";
+            this.add.Size = new System.Drawing.Size(150, 100);
+            this.add.TabIndex = 10;
+            this.add.Text = "Dodaj nowego\r\nklienta";
+            this.add.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
-            // label2
+            // log
             // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.log.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.DarkCyan;
-            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Image = global::PBank.Properties.Resources.arrow_up;
-            this.label2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label2.Location = new System.Drawing.Point(294, 196);
-            this.label2.MaximumSize = new System.Drawing.Size(150, 100);
-            this.label2.MinimumSize = new System.Drawing.Size(150, 100);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 100);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Zaloguj\r\nklienta";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.log.AutoSize = true;
+            this.log.BackColor = System.Drawing.Color.DarkCyan;
+            this.log.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.log.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.log.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.log.ForeColor = System.Drawing.Color.White;
+            this.log.Image = global::PBank.Properties.Resources.arrow_up;
+            this.log.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.log.Location = new System.Drawing.Point(294, 196);
+            this.log.MaximumSize = new System.Drawing.Size(150, 100);
+            this.log.MinimumSize = new System.Drawing.Size(150, 100);
+            this.log.Name = "log";
+            this.log.Size = new System.Drawing.Size(150, 100);
+            this.log.TabIndex = 11;
+            this.log.Text = "Zaloguj\r\nklienta";
+            this.log.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.log.Click += new System.EventHandler(this.log_Click);
             // 
             // label3
             // 
@@ -211,9 +214,9 @@ namespace PBank {
             this.Controls.Add(this.pesel_label);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Search);
+            this.Controls.Add(this.log);
+            this.Controls.Add(this.add);
+            this.Controls.Add(this.Remove);
             this.Name = "_FormKonsultant";
             this.Text = "_FormKonsultant";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this._FormKonsultant_FormClosing);
@@ -223,9 +226,9 @@ namespace PBank {
         }
 
         #endregion
-        private System.Windows.Forms.Label Search;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label Remove;
+        private System.Windows.Forms.Label add;
+        private System.Windows.Forms.Label log;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label pesel_label;

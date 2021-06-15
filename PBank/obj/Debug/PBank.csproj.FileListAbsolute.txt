@@ -124,3 +124,6 @@ C:\Users\Iza\Source\Repos\macierak\P_Bankowosc\PBank\obj\Debug\pl-PL\PBank.resou
 C:\Users\Iza\Source\Repos\macierak\P_Bankowosc\PBank\obj\Debug\PBank.csproj.CopyComplete
 C:\Users\Iza\Source\Repos\macierak\P_Bankowosc\PBank\obj\Debug\PBank.exe
 C:\Users\Iza\Source\Repos\macierak\P_Bankowosc\PBank\obj\Debug\PBank.pdb
+C:\Users\Iza\source\repos\macierak\P_Bankowosc\PBank\obj\Debug\PBank.FormUsunKlient.resources
+C:\Users\Iza\source\repos\macierak\P_Bankowosc\PBank\obj\Debug\PBank.FormPotwierdzUsun.resources
+C:\Users\Iza\source\repos\macierak\P_Bankowosc\PBank\obj\Debug\PBank.FormDodajKient.resources
