@@ -19,9 +19,9 @@ namespace PBank {
             this.tekst[0] = imie;
             this.tekst[1] = nazwisko;
             this.tekst[2] = pesel;
-            this.tekst[3] = nr_dowodu;
+            this.tekst[3] = urzadzenie;
             this.tekst[4] = adres;
-            this.tekst[5] = urzadzenie;
+            this.tekst[5] = nr_dowodu;
             this.tekst[6] = login;
             this.tekst[7] = haslo;
         }
@@ -42,13 +42,13 @@ namespace PBank {
                 pesel.BackColor = System.Drawing.Color.DarkRed;
             }
                 
-            if (nr_dowodu.TextLength != 9) {
-                isCorrect = false;
-                nr_dowodu.BackColor = System.Drawing.Color.DarkRed;
-            }
             if (urzadzenie.TextLength != 15) {
                 isCorrect = false;
                 urzadzenie.BackColor = System.Drawing.Color.DarkRed;
+            }
+            if (nr_dowodu.TextLength != 9) {
+                isCorrect = false;
+                nr_dowodu.BackColor = System.Drawing.Color.DarkRed;
             }
 
             if (isCorrect) {

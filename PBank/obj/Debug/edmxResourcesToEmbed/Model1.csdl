@@ -107,6 +107,14 @@
       <Parameter Name="login" Mode="In" Type="String" />
       <Parameter Name="haslo" Mode="In" Type="String" />
     </FunctionImport>
+    <FunctionImport Name="wplac">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="kwota" Mode="In" Type="Double" />
+    </FunctionImport>
+    <FunctionImport Name="wyplac">
+      <Parameter Name="id" Mode="In" Type="Int32" />
+      <Parameter Name="kwota" Mode="In" Type="Double" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="exklienci">
     <Key>

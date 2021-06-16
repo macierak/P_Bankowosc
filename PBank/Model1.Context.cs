@@ -235,5 +235,31 @@ namespace PBank
     
             return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("dodaj", imieParameter, nazwiskoParameter, peselParameter, nr_dowoduParameter, adresParameter, urzadzenie_mobilneParameter, loginParameter, hasloParameter);
         }
+    
+        public virtual int wplac(Nullable<int> id, Nullable<double> kwota)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var kwotaParameter = kwota.HasValue ?
+                new ObjectParameter("kwota", kwota) :
+                new ObjectParameter("kwota", typeof(double));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("wplac", idParameter, kwotaParameter);
+        }
+    
+        public virtual int wyplac(Nullable<int> id, Nullable<double> kwota)
+        {
+            var idParameter = id.HasValue ?
+                new ObjectParameter("id", id) :
+                new ObjectParameter("id", typeof(int));
+    
+            var kwotaParameter = kwota.HasValue ?
+                new ObjectParameter("kwota", kwota) :
+                new ObjectParameter("kwota", typeof(double));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("wyplac", idParameter, kwotaParameter);
+        }
     }
 }

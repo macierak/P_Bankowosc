@@ -54,14 +54,14 @@ namespace PBank {
                     this.ID = p.ID;//
                 }
 
-                var zalogowanyK = from k in Dane.Klient
+            /*    var zalogowanyK = from k in Dane.Klient
                                   where (k.login.Equals(login1) && k.haslo.Equals(haslo1))
                                   select k;
 
                 foreach (Klient k in zalogowanyK) {
                     //MessageBox.Show("Zalogowano jako klient " + k.Imię + " " + k.Nazwisko);
                     //if(loggedOnPhone()){
-                        if (this.checkphone(/*device.getIMEI,*/k.Urzadzenie_Mobilne, k.Urzadzenie_Mobilne)) {
+                        if (this.checkphone(/*device.getIMEI,k.Urzadzenie_Mobilne, k.Urzadzenie_Mobilne)) {
 
 
                             permissionLevel = 5;
@@ -74,7 +74,7 @@ namespace PBank {
                         this.ID = k.ID;
                     }
                 }
-
+            */
                 if (permissionLevel == 0) {
                     timer1.Enabled = true;
                     wrongpass.Visible = true;
@@ -82,10 +82,10 @@ namespace PBank {
                 else {
                     this.Visible = false;
                     switch (permissionLevel) {
-                        case 5:
+                    /*    case 5:
                             _FormKlient formK = new _FormKlient(ImNaz, this);
                             formK.ShowDialog();
-                            break;
+                            break;  */
                         case 20:
                             _FormAsystent formA = new _FormAsystent(ImNaz, this);
                             formA.ShowDialog();

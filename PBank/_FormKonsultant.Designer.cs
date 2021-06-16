@@ -35,6 +35,7 @@ namespace PBank {
             this.label6 = new System.Windows.Forms.Label();
             this.nazwisko = new System.Windows.Forms.TextBox();
             this.imie = new System.Windows.Forms.TextBox();
+            this.blad = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Remove
@@ -58,6 +59,8 @@ namespace PBank {
             this.Remove.Text = "Usuń\r\nklienta";
             this.Remove.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.Remove.Click += new System.EventHandler(this.Remove_Click);
+            this.Remove.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Remove_MouseDown);
+            this.Remove.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Remove_MouseUp);
             // 
             // add
             // 
@@ -80,6 +83,8 @@ namespace PBank {
             this.add.Text = "Dodaj nowego\r\nklienta";
             this.add.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.add.Click += new System.EventHandler(this.add_Click);
+            this.add.MouseDown += new System.Windows.Forms.MouseEventHandler(this.add_MouseDown);
+            this.add.MouseUp += new System.Windows.Forms.MouseEventHandler(this.add_MouseUp);
             // 
             // log
             // 
@@ -102,6 +107,8 @@ namespace PBank {
             this.log.Text = "Zaloguj\r\nklienta";
             this.log.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.log.Click += new System.EventHandler(this.log_Click);
+            this.log.MouseDown += new System.Windows.Forms.MouseEventHandler(this.log_MouseDown);
+            this.log.MouseUp += new System.Windows.Forms.MouseEventHandler(this.log_MouseUp);
             // 
             // label3
             // 
@@ -199,6 +206,19 @@ namespace PBank {
             this.imie.Size = new System.Drawing.Size(200, 33);
             this.imie.TabIndex = 17;
             // 
+            // blad
+            // 
+            this.blad.AutoSize = true;
+            this.blad.BackColor = System.Drawing.Color.Transparent;
+            this.blad.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.blad.ForeColor = System.Drawing.Color.Maroon;
+            this.blad.Location = new System.Drawing.Point(30, 347);
+            this.blad.Name = "blad";
+            this.blad.Size = new System.Drawing.Size(210, 26);
+            this.blad.TabIndex = 21;
+            this.blad.Text = "Nie ma takiego klienta!";
+            this.blad.Visible = false;
+            // 
             // _FormKonsultant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -206,6 +226,7 @@ namespace PBank {
             this.BackgroundImage = global::PBank.Properties.Resources.bg1;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.blad);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.nazwisko);
@@ -237,5 +258,6 @@ namespace PBank {
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox nazwisko;
         private System.Windows.Forms.TextBox imie;
+        private System.Windows.Forms.Label blad;
     }
 }

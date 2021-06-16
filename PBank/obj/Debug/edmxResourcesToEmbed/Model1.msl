@@ -144,5 +144,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <FunctionImportMapping FunctionImportName="dodaj" FunctionName="BankowoscEntities.Store.dodaj" />
+    <FunctionImportMapping FunctionImportName="wplac" FunctionName="BankowoscEntities.Store.wplac" />
+    <FunctionImportMapping FunctionImportName="wyplac" FunctionName="BankowoscEntities.Store.wyplac" />
   </EntityContainerMapping>
 </Mapping>

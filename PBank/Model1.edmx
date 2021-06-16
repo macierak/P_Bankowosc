@@ -192,6 +192,14 @@ warning 6002: The table/view 'P_Bankowosc.dbo.pracownicy' does not have a primar
           <Parameter Name="id" Type="int" Mode="In" />
           <Parameter Name="date" Type="date" Mode="In" />
         </Function>
+        <Function Name="wplac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="kwota" Type="float" Mode="In" />
+        </Function>
+        <Function Name="wyplac" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="kwota" Type="float" Mode="In" />
+        </Function>
         <Function Name="zatrudnij" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="imie" Type="varchar" Mode="In" />
           <Parameter Name="nazwisko" Type="varchar" Mode="In" />
@@ -381,6 +389,14 @@ warning 6002: The table/view 'P_Bankowosc.dbo.pracownicy' does not have a primar
             <Parameter Name="urzadzenie_mobilne" Mode="In" Type="String" />
             <Parameter Name="login" Mode="In" Type="String" />
             <Parameter Name="haslo" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="wplac">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="kwota" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="wyplac">
+            <Parameter Name="id" Mode="In" Type="Int32" />
+            <Parameter Name="kwota" Mode="In" Type="Double" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="exklienci">
@@ -649,6 +665,8 @@ warning 6002: The table/view 'P_Bankowosc.dbo.pracownicy' does not have a primar
             </EntityTypeMapping>
           </EntitySetMapping>
           <FunctionImportMapping FunctionImportName="dodaj" FunctionName="BankowoscEntities.Store.dodaj" />
+          <FunctionImportMapping FunctionImportName="wplac" FunctionName="BankowoscEntities.Store.wplac" />
+          <FunctionImportMapping FunctionImportName="wyplac" FunctionName="BankowoscEntities.Store.wyplac" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

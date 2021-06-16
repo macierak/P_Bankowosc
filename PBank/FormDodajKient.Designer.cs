@@ -35,9 +35,9 @@ namespace PBank {
             this.label1 = new System.Windows.Forms.Label();
             this.haslo = new System.Windows.Forms.TextBox();
             this.login = new System.Windows.Forms.TextBox();
-            this.nr_dowodu = new System.Windows.Forms.TextBox();
-            this.adres = new System.Windows.Forms.TextBox();
             this.urzadzenie = new System.Windows.Forms.TextBox();
+            this.adres = new System.Windows.Forms.TextBox();
+            this.nr_dowodu = new System.Windows.Forms.TextBox();
             this.pesel = new System.Windows.Forms.TextBox();
             this.nazwisko = new System.Windows.Forms.TextBox();
             this.imie = new System.Windows.Forms.TextBox();
@@ -176,30 +176,6 @@ namespace PBank {
             this.login.Size = new System.Drawing.Size(200, 33);
             this.login.TabIndex = 30;
             // 
-            // nr_dowodu
-            // 
-            this.nr_dowodu.BackColor = System.Drawing.Color.DarkCyan;
-            this.nr_dowodu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nr_dowodu.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.nr_dowodu.ForeColor = System.Drawing.Color.White;
-            this.nr_dowodu.Location = new System.Drawing.Point(32, 340);
-            this.nr_dowodu.MinimumSize = new System.Drawing.Size(200, 30);
-            this.nr_dowodu.Name = "nr_dowodu";
-            this.nr_dowodu.Size = new System.Drawing.Size(200, 33);
-            this.nr_dowodu.TabIndex = 29;
-            // 
-            // adres
-            // 
-            this.adres.BackColor = System.Drawing.Color.DarkCyan;
-            this.adres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.adres.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.adres.ForeColor = System.Drawing.Color.White;
-            this.adres.Location = new System.Drawing.Point(299, 120);
-            this.adres.MinimumSize = new System.Drawing.Size(200, 30);
-            this.adres.Name = "adres";
-            this.adres.Size = new System.Drawing.Size(267, 33);
-            this.adres.TabIndex = 28;
-            // 
             // urzadzenie
             // 
             this.urzadzenie.BackColor = System.Drawing.Color.DarkCyan;
@@ -210,7 +186,31 @@ namespace PBank {
             this.urzadzenie.MinimumSize = new System.Drawing.Size(200, 30);
             this.urzadzenie.Name = "urzadzenie";
             this.urzadzenie.Size = new System.Drawing.Size(200, 33);
-            this.urzadzenie.TabIndex = 27;
+            this.urzadzenie.TabIndex = 29;
+            // 
+            // adres
+            // 
+            this.adres.BackColor = System.Drawing.Color.DarkCyan;
+            this.adres.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.adres.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.adres.ForeColor = System.Drawing.Color.White;
+            this.adres.Location = new System.Drawing.Point(299, 120);
+            this.adres.MinimumSize = new System.Drawing.Size(200, 30);
+            this.adres.Name = "adres";
+            this.adres.Size = new System.Drawing.Size(278, 33);
+            this.adres.TabIndex = 28;
+            // 
+            // nr_dowodu
+            // 
+            this.nr_dowodu.BackColor = System.Drawing.Color.DarkCyan;
+            this.nr_dowodu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nr_dowodu.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.nr_dowodu.ForeColor = System.Drawing.Color.White;
+            this.nr_dowodu.Location = new System.Drawing.Point(32, 340);
+            this.nr_dowodu.MinimumSize = new System.Drawing.Size(200, 30);
+            this.nr_dowodu.Name = "nr_dowodu";
+            this.nr_dowodu.Size = new System.Drawing.Size(200, 33);
+            this.nr_dowodu.TabIndex = 27;
             // 
             // pesel
             // 
@@ -286,9 +286,9 @@ namespace PBank {
             this.Controls.Add(this.label1);
             this.Controls.Add(this.haslo);
             this.Controls.Add(this.login);
-            this.Controls.Add(this.nr_dowodu);
-            this.Controls.Add(this.adres);
             this.Controls.Add(this.urzadzenie);
+            this.Controls.Add(this.adres);
+            this.Controls.Add(this.nr_dowodu);
             this.Controls.Add(this.pesel);
             this.Controls.Add(this.nazwisko);
             this.Controls.Add(this.imie);
@@ -313,9 +313,9 @@ namespace PBank {
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox haslo;
         private System.Windows.Forms.TextBox login;
-        private System.Windows.Forms.TextBox nr_dowodu;
-        private System.Windows.Forms.TextBox adres;
         private System.Windows.Forms.TextBox urzadzenie;
+        private System.Windows.Forms.TextBox adres;
+        private System.Windows.Forms.TextBox nr_dowodu;
         private System.Windows.Forms.TextBox pesel;
         private System.Windows.Forms.TextBox nazwisko;
         private System.Windows.Forms.TextBox imie;
