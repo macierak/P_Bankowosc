@@ -24,6 +24,7 @@ namespace PBank {
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
+            this.components = new System.ComponentModel.Container();
             this.Remove = new System.Windows.Forms.Label();
             this.add = new System.Windows.Forms.Label();
             this.log = new System.Windows.Forms.Label();
@@ -36,6 +37,7 @@ namespace PBank {
             this.nazwisko = new System.Windows.Forms.TextBox();
             this.imie = new System.Windows.Forms.TextBox();
             this.blad = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // Remove
@@ -219,6 +221,11 @@ namespace PBank {
             this.blad.Text = "Nie ma takiego klienta!";
             this.blad.Visible = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 50;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // _FormKonsultant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -259,5 +266,6 @@ namespace PBank {
         private System.Windows.Forms.TextBox nazwisko;
         private System.Windows.Forms.TextBox imie;
         private System.Windows.Forms.Label blad;
+        private System.Windows.Forms.Timer timer1;
     }
 }

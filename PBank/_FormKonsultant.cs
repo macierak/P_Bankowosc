@@ -69,6 +69,7 @@ namespace PBank {
 
             if (correct) {
                 blad.Visible = true;
+                timer1.Enabled = true;
                 String nazwa = "";
                 using (P_BankowoscEntities Dane = new P_BankowoscEntities()) {
                     var logowanie = from k in Dane.Klient
@@ -96,6 +97,11 @@ namespace PBank {
         }
         private void log_MouseUp(object sender, MouseEventArgs e) {
             log.BackColor = System.Drawing.Color.DarkCyan;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e) {
+            blad.Visible = false;
+            timer1.Enabled = false;
         }
     }
 }
