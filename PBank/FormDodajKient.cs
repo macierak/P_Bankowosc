@@ -19,14 +19,15 @@ namespace PBank {
             this.tekst[0] = imie;
             this.tekst[1] = nazwisko;
             this.tekst[2] = pesel;
-            this.tekst[3] = urzadzenie;
+            this.tekst[3] = nr_dowodu;
             this.tekst[4] = adres;
-            this.tekst[5] = nr_dowodu;
+            this.tekst[5] = urzadzenie;
             this.tekst[6] = login;
             this.tekst[7] = haslo;
         }
 
         private void dodaj_Click(object sender, EventArgs e) {
+            MessageBox.Show(pesel.Text);
             isCorrect = true;
             foreach (TextBox txt in tekst) {
                 txt.BackColor = System.Drawing.Color.DarkCyan;

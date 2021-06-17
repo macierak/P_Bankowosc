@@ -68,7 +68,7 @@ namespace PBank {
             this.pesel.BackColor = System.Drawing.Color.Transparent;
             this.pesel.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.pesel.ForeColor = System.Drawing.Color.DarkCyan;
-            this.pesel.Location = new System.Drawing.Point(565, 96);
+            this.pesel.Location = new System.Drawing.Point(570, 55);
             this.pesel.Name = "pesel";
             this.pesel.Size = new System.Drawing.Size(62, 26);
             this.pesel.TabIndex = 3;
@@ -92,7 +92,7 @@ namespace PBank {
             this.nr_dowodu.BackColor = System.Drawing.Color.Transparent;
             this.nr_dowodu.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.nr_dowodu.ForeColor = System.Drawing.Color.DarkCyan;
-            this.nr_dowodu.Location = new System.Drawing.Point(565, 55);
+            this.nr_dowodu.Location = new System.Drawing.Point(570, 96);
             this.nr_dowodu.Name = "nr_dowodu";
             this.nr_dowodu.Size = new System.Drawing.Size(64, 26);
             this.nr_dowodu.TabIndex = 5;

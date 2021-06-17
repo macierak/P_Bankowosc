@@ -73,7 +73,7 @@ namespace PBank {
                 String nazwa = "";
                 using (P_BankowoscEntities Dane = new P_BankowoscEntities()) {
                     var logowanie = from k in Dane.Klient
-                                where (k.login.Equals(imie.Text) && k.haslo.Equals(nazwisko.Text) && k.Pesel.Equals(pesel.Text))
+                                where (k.Imię.Equals(imie.Text) && k.Nazwisko.Equals(nazwisko.Text) && k.Pesel.Equals(pesel.Text))
                                 select k;
 
                     foreach(Klient k in logowanie) {

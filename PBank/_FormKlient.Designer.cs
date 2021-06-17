@@ -52,7 +52,7 @@ namespace PBank {
             this.wplata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wplata.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wplata.ForeColor = System.Drawing.Color.White;
-            this.wplata.Image = global::PBank.Properties.Resources.plus;
+            this.wplata.Image = global::PBank.Properties.Resources.arrow_up;
             this.wplata.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.wplata.Location = new System.Drawing.Point(186, 304);
             this.wplata.MaximumSize = new System.Drawing.Size(150, 100);
@@ -220,7 +220,7 @@ namespace PBank {
             this.wyplata.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.wyplata.Font = new System.Drawing.Font("Candara Light", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.wyplata.ForeColor = System.Drawing.Color.White;
-            this.wyplata.Image = global::PBank.Properties.Resources.plus;
+            this.wyplata.Image = global::PBank.Properties.Resources.arrow_down;
             this.wyplata.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.wyplata.Location = new System.Drawing.Point(441, 304);
             this.wyplata.MaximumSize = new System.Drawing.Size(150, 100);

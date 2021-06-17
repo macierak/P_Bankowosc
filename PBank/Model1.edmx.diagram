@@ -8,12 +8,12 @@
         <EntityTypeShape EntityType="BankowoscEntities.Karta" Width="1.5" PointX="0.5" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="BankowoscEntities.Klient" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
         <EntityTypeShape EntityType="BankowoscEntities.Pracownik" Width="1.5" PointX="3.125" PointY="0.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="BankowoscEntities.exklienci" Width="1.5" PointX="6.875" PointY="1.25" />
+        <EntityTypeShape EntityType="BankowoscEntities.exklienci" Width="1.5" PointX="6.625" PointY="1.25" />
         <EntityTypeShape EntityType="BankowoscEntities.expracownicy" Width="1.5" PointX="9.125" PointY="1.125" />
-        <EntityTypeShape EntityType="BankowoscEntities.klienci" Width="1.5" PointX="6.25" PointY="0.5" />
-        <EntityTypeShape EntityType="BankowoscEntities.pracownicy" Width="1.5" PointX="8.875" PointY="0.5" />
-        <EntityTypeShape EntityType="BankowoscEntities.Pracownik_ARCH" Width="1.5" PointX="3.875" PointY="1.25" />
-        <EntityTypeShape EntityType="BankowoscEntities.Klient_ARCH" Width="1.5" PointX="1" PointY="0.75" />
+        <EntityTypeShape EntityType="BankowoscEntities.klienci" Width="1.5" PointX="7.625" PointY="0.5" />
+        <EntityTypeShape EntityType="BankowoscEntities.pracownicy" Width="1.5" PointX="10.25" PointY="0.625" />
+        <EntityTypeShape EntityType="BankowoscEntities.Pracownik_ARCH" Width="1.5" PointX="3.875" PointY="0.75" />
+        <EntityTypeShape EntityType="BankowoscEntities.Klient_ARCH" Width="1.5" PointX="1.25" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
